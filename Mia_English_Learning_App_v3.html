@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mia's English – A1 | יחידה 1</title>
+<style>
+:root{--bg:#0f172a;--bg2:#1e293b;--bg3:#334155;--tx:#f8fafc;--mu:#94a3b8;--blue:#38bdf8;--green:#34d399;--pink:#f472b6;--purple:#c084fc;--amber:#fbbf24;--red:#f87171;--bd:#334155;--r:16px;--r2:10px}
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--tx);min-height:100vh;line-height:1.6;padding-bottom:80px}
+.container{max-width:1000px;margin:0 auto;padding:14px}
+button{cursor:pointer;color:inherit}
+.btn{background:var(--bg3);border:1px solid #475569;color:var(--tx);padding:9px 15px;border-radius:var(--r2);font-weight:700;font-size:.9rem;transition:.15s}
+.btn:hover{background:#475569;transform:translateY(-1px)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.btn-main{background:linear-gradient(135deg,#22c55e,#16a34a);border-color:#16a34a;color:#fff}
+.btn-blue{background:linear-gradient(135deg,#0ea5e9,#2563eb);border-color:#2563eb;color:#fff}
+.btn-wa{background:linear-gradient(135deg,#25d366,#128c7e);border-color:#128c7e;color:#fff}
+.btn-red{background:rgba(248,113,113,.15);border-color:rgba(248,113,113,.4);color:#fca5a5}
+.btn-sm{padding:5px 10px;font-size:.8rem}
+header{background:linear-gradient(145deg,#1e293b,#0f172a);border:1px solid var(--bd);border-radius:var(--r);padding:20px;margin-bottom:16px;box-shadow:0 10px 25px -5px rgba(0,0,0,.4)}
+.h-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.title{font-size:1.5rem;font-weight:800;background:linear-gradient(90deg,#38bdf8,#f472b6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:14px}
+.stat{background:rgba(15,23,42,.6);border:1px solid var(--bd);padding:10px;border-radius:var(--r2);text-align:center}
+.stat b{display:block;font-size:1.3rem;color:var(--blue)}.stat span{font-size:.78rem;color:var(--mu)}
+.bar{height:10px;background:var(--bg3);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#38bdf8,#34d399);border-radius:99px;transition:width .4s}
+/* readiness board */
+.board{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:16px;margin-bottom:16px}
+.board-top{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.ring{--p:0;width:96px;height:96px;border-radius:50%;background:conic-gradient(var(--green) calc(var(--p)*1%),var(--bg3) 0);display:grid;place-items:center;flex:none}
+.ring div{width:74px;height:74px;border-radius:50%;background:var(--bg2);display:grid;place-items:center;font-weight:800;font-size:1.3rem}
+.brow{display:grid;grid-template-columns:150px 1fr 110px;gap:10px;align-items:center;padding:7px 4px;border-top:1px solid var(--bd);cursor:pointer}
+.brow:hover{background:rgba(255,255,255,.03)}
+.pill{font-size:.74rem;font-weight:800;padding:3px 8px;border-radius:99px;text-align:center;color:#0f172a}
+.s0{background:#94a3b8}.s1{background:var(--amber)}.s2{background:#fb923c}.s3{background:var(--green)}.s4{background:var(--blue)}
+/* tabs */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:16px}
+.tab{background:var(--bg2);border:1px solid var(--bd);color:var(--mu);padding:11px 16px;border-radius:var(--r2);font-weight:700;white-space:nowrap;transition:.15s}
+.tab.active{background:linear-gradient(135deg,rgba(56,189,248,.2),rgba(192,132,252,.2));border-color:var(--blue);color:var(--blue)}
+.tab-content{display:none;animation:fi .3s}.tab-content.active{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* intro */
+details.intro{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);margin-bottom:16px;overflow:hidden}
+details.intro>summary{padding:14px 18px;font-weight:800;color:var(--blue);cursor:pointer;font-size:1.05rem;list-style:none}
+details.intro>summary::before{content:'▾ '}
+.intro-body{padding:4px 18px 18px}
+.intro-body h4{margin:14px 0 6px;color:var(--amber)}
+.rule{background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.35);border-radius:var(--r2);padding:10px 14px;margin:8px 0;transition:.3s}
+.rule.flash{box-shadow:0 0 0 3px var(--amber);background:rgba(251,191,36,.2)}
+.rule b.t{color:var(--amber)}.rule .ex{color:#a5f3fc;font-size:.92rem;direction:ltr;text-align:left;margin-top:4px}
+.rule .xc{color:#fca5a5;font-size:.9rem;margin-top:4px}
+table.gt{width:100%;border-collapse:collapse;margin:10px 0;font-size:.92rem;display:block;overflow-x:auto}
+.gt th{background:var(--bg3);padding:8px;text-align:right}.gt td{padding:8px;border-bottom:1px solid var(--bd)}
+.en-word{color:var(--blue);border-bottom:1.5px dashed var(--blue);cursor:pointer;font-weight:700;direction:ltr;display:inline-block}
+.th-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin:10px 0}
+.th-card{border-radius:var(--r2);padding:12px;border:1px solid}
+.th0{background:rgba(56,189,248,.08);border-color:rgba(56,189,248,.4)}.th1{background:rgba(244,114,182,.08);border-color:rgba(244,114,182,.4)}
+.say{display:inline-flex;gap:4px;align-items:center;background:var(--bg3);border:1px solid #475569;border-radius:99px;padding:3px 10px;margin:3px;font-size:.88rem;direction:ltr}
+/* lesson */
+.lesson{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:16px}
+.l-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.l-top .grp{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:.72rem;font-weight:800;padding:2px 8px;border-radius:99px;background:rgba(52,211,153,.2);color:var(--green)}
+.exmap{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:6px;margin:10px 0}
+.exmap button{padding:7px 0;border-radius:8px;border:1px solid var(--bd);background:var(--bg);font-weight:700;font-size:.82rem}
+.exmap .d1{background:rgba(52,211,153,.25);border-color:var(--green)}.exmap .d2{background:rgba(251,191,36,.2);border-color:var(--amber)}.exmap .cur{outline:2px solid var(--blue)}
+.xcard{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:18px;margin-top:12px}
+.q{font-size:1.15rem;font-weight:700;margin-bottom:14px}
+.q .en{direction:ltr;display:inline-block;color:#e0f2fe}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.opt{background:var(--bg2);border:2px solid var(--bd);padding:13px;border-radius:var(--r2);font-weight:700;font-size:1rem;transition:.15s}
+.opt:hover:not(:disabled){border-color:var(--blue);transform:translateY(-2px)}
+.opt.ok{background:rgba(52,211,153,.25);border-color:var(--green)}.opt.no{background:rgba(248,113,113,.2);border-color:var(--red);opacity:.6}
+.opt.ltr{direction:ltr}
+input.txt{width:100%;background:var(--bg2);border:2px solid var(--bd);border-radius:var(--r2);padding:12px;font-size:1.15rem;color:var(--tx);outline:none}
+input.txt:focus{border-color:var(--blue)}input.ltr{direction:ltr;text-align:left}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.scr-zone{min-height:54px;border:2px dashed #475569;border-radius:var(--r2);padding:8px;display:flex;flex-wrap:wrap;gap:8px;direction:ltr;margin-bottom:10px}
+.tok{background:var(--bg3);border:1px solid #64748b;border-radius:8px;padding:8px 13px;font-weight:700;font-size:1.05rem;direction:ltr}
+.tok:hover{background:#475569}.tok.used{opacity:.25;pointer-events:none}
+.fb{margin-top:14px;border-radius:var(--r2);padding:12px 14px;animation:fi .25s}
+.fb.ok{background:rgba(52,211,153,.12);border:1px solid var(--green)}.fb.bad{background:rgba(248,113,113,.1);border:1px solid var(--red)}.fb.info{background:rgba(56,189,248,.1);border:1px solid var(--blue)}
+.fb .rl{background:rgba(251,191,36,.1);border-radius:8px;padding:8px 10px;margin-top:8px;font-size:.92rem}
+.fb .an{margin-top:8px;color:#fcd34d;font-size:.9rem}
+.pat{font-family:monospace;font-size:1.3rem;letter-spacing:3px;direction:ltr;display:inline-block;color:var(--amber)}
+.mic{width:76px;height:76px;border-radius:50%;border:none;font-size:2rem;background:linear-gradient(135deg,#ec4899,#8b5cf6);box-shadow:0 0 0 0 rgba(236,72,153,.6)}
+.mic.rec{animation:pulse 1s infinite;background:#ef4444}
+@keyframes pulse{70%{box-shadow:0 0 0 18px rgba(239,68,68,0)}100%{box-shadow:0 0 0 0 rgba(239,68,68,0)}}
+.speak-sent{font-size:1.7rem;font-weight:800;direction:ltr;text-align:center;margin:10px 0;color:#e0f2fe}
+.heard{background:var(--bg2);border-radius:8px;padding:8px 12px;direction:ltr;text-align:left;margin-top:8px;color:#cbd5e1}
+.heard .w-ok{color:var(--green)}.heard .w-no{color:var(--red);text-decoration:underline wavy}
+/* flashcards */
+.fc-wrap{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:16px;margin-bottom:16px}
+.fc-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+select.sel{background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:6px 10px}
+.flip{perspective:1000px;height:230px;cursor:pointer;margin:12px 0}
+.flip-in{position:relative;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flip.flipped .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;text-align:center}
+.front{background:linear-gradient(145deg,#1e3a8a,#312e81)}.back{background:linear-gradient(145deg,#831843,#6d28d9);transform:rotateY(180deg)}
+.fc-en{font-size:2.6rem;font-weight:800;direction:ltr}.fc-he{font-size:2.2rem;font-weight:800}
+.fc-tag{font-size:.74rem;padding:3px 10px;border-radius:99px;background:rgba(251,191,36,.25);color:var(--amber);margin-bottom:8px;font-weight:800}
+.fc-timer{height:6px;background:var(--bg3);border-radius:9px;overflow:hidden}.fc-timer i{display:block;height:100%;background:var(--amber);width:100%}
+.proof{background:var(--bg);border:1px solid var(--purple);border-radius:var(--r2);padding:12px;margin-top:10px}
+/* exam */
+.exam-bar{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center;background:var(--bg2);border:1px solid #78350f;padding:10px 14px;border-radius:var(--r2);margin-bottom:12px;position:sticky;top:0;z-index:5}
+.report{background:var(--bg);border:2px solid var(--green);border-radius:var(--r);padding:18px;margin-top:16px}
+.trow{display:grid;grid-template-columns:130px 1fr 60px;gap:8px;align-items:center;margin:6px 0}
+/* modal/bubble/toast */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:100;padding:14px}
+.modal-bg.show{display:flex}.modal{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:20px;max-width:520px;width:100%;max-height:90vh;overflow:auto}
+textarea.rep{width:100%;height:240px;background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:10px;font-size:.88rem;direction:rtl;resize:vertical}
+#bubble{position:fixed;display:none;background:#0b1220;border:1px solid var(--blue);border-radius:12px;padding:10px 14px;z-index:90;box-shadow:0 8px 24px rgba(0,0,0,.6);max-width:260px}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111827;border:1px solid var(--amber);padding:10px 18px;border-radius:99px;z-index:120;display:none;font-weight:700}
+.xpfloat{position:fixed;font-weight:800;color:var(--amber);z-index:110;pointer-events:none;animation:up 1s forwards}
+@keyframes up{to{transform:translateY(-70px);opacity:0}}
+.conf{position:fixed;top:-20px;font-size:1.6rem;z-index:130;pointer-events:none;animation:fall 1.8s linear forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(540deg)}}
+@media(max-width:600px){.brow{grid-template-columns:100px 1fr 80px;font-size:.85rem}.title{font-size:1.2rem}.fc-en{font-size:2rem}}
+#chat-log{max-height:52vh;overflow:auto;display:flex;flex-direction:column;gap:8px;padding:8px 2px;margin:8px 0}
+.cb,.cu{max-width:85%;padding:9px 13px;border-radius:14px;direction:ltr;text-align:left;animation:fi .25s}
+.cb{background:var(--bg3);align-self:flex-start}.cu{background:linear-gradient(135deg,#0ea5e9,#2563eb);align-self:flex-end}
+.cb small{direction:rtl;text-align:right;color:var(--mu);margin-top:3px}
+.cfix{align-self:stretch;background:rgba(251,191,36,.12);border:1px solid var(--amber);border-radius:10px;padding:8px 12px;font-size:.9rem}
+.chip{background:var(--bg);border:1px solid var(--blue);color:var(--blue);border-radius:99px;padding:6px 12px;font-size:.9rem;direction:ltr}
+</style>
+</head>
+<body>
+<div class="modal-bg" id="m-reset"><div class="modal"><h3 style="color:var(--red)">איפוס כל ההתקדמות?</h3><p style="margin:10px 0">כל הנקודות, התרגילים, הכרטיסיות והמבחן יימחקו ולא ניתן יהיה לשחזר אותם.</p><div class="row"><button class="btn" onclick="closeM('m-reset')">ביטול</button><button class="btn btn-red" onclick="doReset()">כן, לאפס הכל</button></div></div></div>
+<div class="modal-bg" id="m-wa"><div class="modal"><h3>📤 דוח התקדמות לוואטסאפ</h3><p style="color:var(--mu);font-size:.88rem;margin:6px 0">כך ייראה הדוח. אפשר לערוך לפני השליחה.</p><textarea class="rep" id="wa-text"></textarea>
+<label style="display:block;margin-top:8px;font-size:.88rem">מספר וואטסאפ של ההורה (לא חובה – נשמר במכשיר):<input class="txt ltr" id="wa-phone" placeholder="05X-XXXXXXX" inputmode="tel" style="padding:8px;font-size:1rem"></label>
+<div class="row"><button class="btn btn-wa" onclick="sendWA()">📤 שליחה בוואטסאפ</button><button class="btn" onclick="copyRep()">📋 העתקה</button><button class="btn" onclick="closeM('m-wa')">סגירה</button></div></div></div>
+<div class="modal-bg" id="m-sync"><div class="modal"><h3>📲 להמשיך במכשיר אחר</h3><p style="color:var(--mu);font-size:.88rem;margin:6px 0">ההתקדמות נשמרת אוטומטית בדפדפן הזה. כדי להמשיך בטלפון או במחשב אחר: שלחי לעצמך את הקישור ופתחי אותו במכשיר השני.</p><div class="row"><button class="btn btn-blue" onclick="syncCopy()">🔗 העתקת קישור</button><button class="btn btn-wa" onclick="syncWA()">📤 שליחה בוואטסאפ</button></div><textarea class="rep" id="sync-code" style="height:70px" placeholder="קיבלת קישור או קוד? הדביקי כאן"></textarea><div class="row"><button class="btn btn-main" onclick="syncBox()">⬇️ ייבוא</button><button class="btn" onclick="closeM('m-sync')">סגירה</button></div><div id="sync-msg" style="margin-top:8px"></div></div></div>
+<div id="bubble"></div><div id="toast"></div>
+
+<div class="container">
+<header>
+  <div class="h-top">
+    <div><h1 class="title">היי מיה! בואי נלמד אנגלית 🌟</h1><p style="color:var(--mu);font-size:.88rem">יחידה 1 | רמה A1 | ההתקדמות נשמרת אוטומטית 💾</p></div>
+    <div class="acts">
+      <button class="btn btn-wa" onclick="openWA()">📤 שליחת דוח התקדמות בוואטסאפ</button>
+      <button class="btn" id="snd-btn" onclick="toggleSound()">🔊</button>
+      <button class="btn btn-blue" onclick="openSync()">📲 מכשיר אחר</button><button class="btn btn-red" onclick="openM('m-reset')">🔄 איפוס</button>
+    </div>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div class="bar" style="margin-top:14px"><i id="lvl-bar" style="width:0"></i></div>
+</header>
+
+<section class="board">
+  <div class="board-top">
+    <div class="ring" id="ring"><div id="ring-t">0%</div></div>
+    <div style="flex:1;min-width:200px"><h3 id="ready-title">מוכנות למבחן</h3><p id="ready-sub" style="color:var(--mu);font-size:.9rem"></p></div>
+  </div>
+  <div id="board-rows"></div>
+</section>
+
+<nav class="tabs" id="tabs"></nav>
+<div id="panes"></div>
+</div>
+<script>
+/* ===================== HELPERS ===================== */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function shuffle(a){const r=[...a];for(let i=r.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[r[i],r[j]]=[r[j],r[i]]}return r}
+const rnd=a=>a[Math.floor(Math.random()*a.length)];
+const CONTR={"i'm":"i am","you're":"you are","he's":"he is","she's":"she is","it's":"it is","we're":"we are","they're":"they are","isn't":"is not","aren't":"are not"};
+function normEN(s){s=String(s).toLowerCase().replace(/[’‘`´]/g,"'").replace(/[.,!?;:"]/g,' ').replace(/\s+/g,' ').trim();return s.split(' ').map(w=>CONTR[w]||w).join(' ').replace(/\s+/g,' ').trim()}
+function normHE(s){return String(s).replace(/[\u0591-\u05C7]/g,'').replace(/["'׳״.,!?()\-]/g,' ').replace(/\s+/g,' ').trim()}
+function heAlts(he){return he.split(/[\/,(]/).map(x=>normHE(x.replace(')','')).trim()).filter(Boolean)}
+function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let p=Array.from({length:n+1},(_,j)=>j);for(let i=1;i<=m;i++){const c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+/* thin-hint ladder: 1 count · 2 first letters · 3 matching letters · 4 half the word · 5 reveal */
+function thinHint(target,guess,lvl){
+  const tw=target.split(' '),gw=guess.trim().split(/\s+/).filter(Boolean),he=/[\u0590-\u05FF]/.test(target),dir=he?'rtl':'ltr';
+  if(lvl>=5)return `התשובה היא: <span class="pat" dir="${dir}" style="color:var(--green)">${esc(target)}</span>`;
+  if(lvl<=1){let s=tw.length>1?`במשפט צריכות להיות <b>${tw.length}</b> מילים`:`במילה יש <b>${target.length}</b> אותיות`;
+    if(tw.length>1&&gw.length&&gw.length!==tw.length)s+=` (את כתבת ${gw.length})`;else if(tw.length===1&&guess.trim()&&guess.trim().length!==target.length)s+=` (את כתבת ${guess.trim().length})`;return s+'.'}
+  if(lvl===2)return `האות הראשונה בכל מילה: <span class="pat" dir="${dir}">${tw.map(w=>w[0]+'…').join('  ')}</span>`;
+  const out=tw.map((w,i)=>{const g=gw[i]||'';if(g.toLowerCase()===w.toLowerCase())return w;const keep=lvl>=4?Math.ceil(w.length/2):1;
+    return [...w].map((c,j)=>(j<keep||(g[j]&&g[j].toLowerCase()===c.toLowerCase()))?c:'_').join('')});
+  return `ככה זה נראה (אותיות נכונות + רמז): <span class="pat" dir="${dir}">${out.join('   ')}</span>`}
+/* speech */
+let VOICE=null;
+function initVoice(){if(!('speechSynthesis'in window))return;const f=()=>{const v=speechSynthesis.getVoices();VOICE=v.find(x=>/^en[-_]US/i.test(x.lang)&&/Google|Natural|Samantha|Siri|Aria/i.test(x.name))||v.find(x=>/^en/i.test(x.lang))||null};f();speechSynthesis.onvoiceschanged=f}
+function speak(t,rate=.9){if(!('speechSynthesis'in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(t).replace(/<[^>]*>/g,''));u.lang='en-US';u.rate=rate;if(VOICE)u.voice=VOICE;speechSynthesis.speak(u)}
+function listenOnce(lang,onRes,onErr,onEnd){const R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R){onErr('unsupported');return null}
+  const r=new R();r.lang=lang;r.interimResults=false;r.maxAlternatives=5;let got=false;
+  r.onresult=e=>{got=true;onRes([...e.results[0]].map(a=>a.transcript))};
+  r.onerror=e=>{got=true;onErr(e.error)};
+  r.onend=()=>{if(!got)onErr('no-speech');onEnd&&onEnd()};
+  try{r.start()}catch(e){onErr('start');return null}return r}
+/* sound */
+let AC=null;
+function beep(ok){if(typeof S!=='undefined'&&!S.sound)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const seq=ok?[[660,.0],[880,.12]]:[[220,0]];seq.forEach(([f,d])=>{const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f;o.type=ok?'sine':'triangle';g.gain.value=.08;o.connect(g);g.connect(AC.destination);o.start(AC.currentTime+d);o.stop(AC.currentTime+d+.18)})}catch(e){}}
+/* ===================== DATA ===================== */
+const W=[
+{en:'age',he:'גיל',ex:'What is your age?',cl:'What is your ___? I am ten.',r:'vocab-time',sp:'spell-silent-e',fun:'ידעת? כדי לשאול גיל אפשר לומר How old are you? – "כמה זקנה את?" 😄 והתשובה: I am ten.'},
+{en:'also',he:'גם',ex:'I also like music.',cl:'I like pizza. I ___ like cake.',r:'vocab-also',sp:'spell-also',fun:'ידעת? also אוהבת לשבת <b>אחרי</b> am/is/are (I am also happy) ו<b>לפני</b> פועלים אחרים (I also like pizza).'},
+{en:'begin',he:'להתחיל',ex:'We begin school at eight.',cl:'We ___ school at eight.',r:'vocab-word',sp:'spell-begin',fun:'ידעת? begin ו-start הן כמעט תאומות – שתיהן "להתחיל"!'},
+{en:'birthday',he:'יום הולדת',ex:'My birthday is in May.',cl:'Today is my ___. I get a cake!',r:'vocab-word',sp:'spell-th',fun:'ידעת? birthday = birth (לידה) + day (יום). שתי מילים שהתחבקו 🎂'},
+{en:'different',he:'שונה',ex:'They have different bags.',cl:'A cat and a dog are ___.',r:'vocab-different',sp:'spell-double',fun:'ידעת? ב-different יש שני f – כמו שני אחים תאומים שדווקא… שונים 😉'},
+{en:'hobby',he:'תחביב',ex:'Drawing is my hobby.',cl:'My ___ is dancing. I love it!',r:'vocab-word',sp:'spell-double',fun:'ידעת? ב-hobby יש שני b, כמו שני כדורי גלידה 🍨'},
+{en:'month',he:'חודש',ex:'May is a nice month.',cl:'January is the first ___ of the year.',r:'vocab-time',sp:'spell-th',fun:'ידעת? month היא אחת המילים שהכי קשה לומר גם לדוברי אנגלית – במיוחד ברבים: months!'},
+{en:'pool',he:'בריכה',ex:'We swim in the pool.',cl:'We swim in the ___.',r:'vocab-word',sp:'spell-double',fun:'ידעת? ב-pool יש שני oo – כמו שתי בועות במים 🫧'},
+{en:'the same',he:'אותו הדבר',ex:'We have the same bag.',cl:'Dana and I have ___ bag.',r:'vocab-same',sp:'spell-two-words',fun:'ידעת? the same הן שתי מילים. תחשבי על שתי חברות עם אותו תיק בדיוק!'},
+{en:'year',he:'שנה',ex:'I am ten years old.',cl:'There are twelve months in a ___.',r:'vocab-time',sp:'spell-ea',fun:'ידעת? אומרים ten year<b>s</b> old – ברבים, עם s!'},
+{en:'have',he:'יש / להחזיק',ex:'I have a new pencil.',cl:'I ___ a new pencil.',r:'vocab-have',sp:'spell-silent-e',fun:'ידעת? באנגלית אין "יש לי" – אומרים I have = "אני מחזיקה" 😊'},
+{en:'school',he:'בית ספר',ex:'We are at school.',cl:'We learn English at ___.',r:'vocab-word',sp:'spell-double',fun:'ידעת? ב-school האותיות ch נשמעות כמו k: "סקול". וגם יש בה שני oo!'},
+{en:'reading',he:'קריאה',ex:'Reading is fun.',cl:'___ is fun. I love books!',r:'vocab-ing',sp:'spell-ea',fun:'ידעת? ב-reading הצירוף ea נשמע כמו "אִי" ארוכה: רי-דינג.'},
+{en:'drawing',he:'ציור',ex:'Drawing is my hobby.',cl:'___ is my hobby. I draw pictures.',r:'vocab-ing',sp:'spell-ing',fun:'ידעת? drawing = draw (לצייר) + ing – הפועל הפך לשם של הפעולה.'}
+];
+const P=[['I','אני'],['you','אתה / את / אתם'],['he','הוא'],['she','היא'],['it','זה / זאת'],['we','אנחנו'],['they','הם / הן']];
+const EXAM_WORDS_LIST=[...W.map(w=>({en:w.en,he:w.he,ex:w.ex})),...P.map(p=>({en:p[0],he:p[1],ex:{I:'I am happy.',you:'You are happy.',he:'He is my father.',she:'She is a doctor.',it:'It is big.',we:'We are at the park.',they:'They are at school.'}[p[0]]}))];
+        const EXPANSION_A1_WORDS = [
+            { en: "dog", he: "כלב" }, { en: "cat", he: "חתול" }, { en: "friend", he: "חבר / חברה" },
+            { en: "family", he: "משפחה" }, { en: "father", he: "אבא" }, { en: "mother", he: "אמא" },
+            { en: "brother", he: "אח" }, { en: "sister", he: "אחות" }, { en: "baby", he: "תינוק" },
+            { en: "teacher", he: "מורה" }, { en: "doctor", he: "רופא / רופאה" }, { en: "student", he: "תלמיד / תלמידה" },
+            { en: "park", he: "פארק" }, { en: "house", he: "בית" }, { en: "room", he: "חדר" },
+            { en: "door", he: "דלת" }, { en: "window", he: "חלון" }, { en: "table", he: "שולחן" },
+            { en: "chair", he: "כיסא" }, { en: "book", he: "ספר" }, { en: "pen", he: "עט" },
+            { en: "pencil", he: "עיפרון" }, { en: "bag", he: "תיק" }, { en: "happy", he: "שמח / שמחה" },
+            { en: "sad", he: "עצוב / עצובה" }, { en: "big", he: "גדול" }, { en: "small", he: "קטן" },
+            { en: "good", he: "טוב" }, { en: "bad", he: "רע" }, { en: "new", he: "חדש" },
+            { en: "old", he: "ישן / זקן" }, { en: "hot", he: "חם" }, { en: "cold", he: "קר" },
+            { en: "fast", he: "מהיר" }, { en: "slow", he: "איטי" }, { en: "sun", he: "שמש" },
+            { en: "moon", he: "ירח" }, { en: "star", he: "כוכב" }, { en: "water", he: "מים" },
+            { en: "milk", he: "חלב" }, { en: "bread", he: "לחם" }, { en: "apple", he: "תפוח" },
+            { en: "banana", he: "בננה" }, { en: "orange", he: "תפוז / כתום" }, { en: "red", he: "אדום" },
+            { en: "blue", he: "כחול" }, { en: "green", he: "ירוק" }, { en: "yellow", he: "צהוב" },
+            { en: "black", he: "שחור" }, { en: "white", he: "לבן" }, { en: "pink", he: "ורוד" },
+            { en: "one", he: "אחת" }, { en: "two", he: "שתיים" }, { en: "three", he: "שלוש" },
+            { en: "four", he: "ארבע" }, { en: "five", he: "חמש" }, { en: "six", he: "שש" },
+            { en: "seven", he: "שבע" }, { en: "eight", he: "שמונה" }, { en: "nine", he: "תשע" },
+            { en: "ten", he: "עשר" }, { en: "morning", he: "בוקר" }, { en: "night", he: "לילה" },
+            { en: "day", he: "יום" }, { en: "today", he: "היום" }, { en: "game", he: "משחק" },
+            { en: "music", he: "מוזיקה" }, { en: "dance", he: "ריקוד" }, { en: "play", he: "לשחק" },
+            { en: "like", he: "לאהוב / לחבב" }, { en: "love", he: "לאהוב" }, { en: "see", he: "לראות" },
+            { en: "hear", he: "לשמוע" }, { en: "eat", he: "לאכול" }, { en: "drink", he: "לשתות" },
+            { en: "run", he: "לרוץ" }, { en: "walk", he: "ללכת" }, { en: "jump", he: "לקפוץ" },
+            { en: "sleep", he: "לישון" }, { en: "write", he: "לכתוב" }, { en: "speak", he: "לדבר" },
+            { en: "listen", he: "להקשיב" }, { en: "open", he: "לפתוח" }, { en: "close", he: "לסגור" },
+            { en: "come", he: "לבוא" }, { en: "go", he: "ללכת" }, { en: "stop", he: "לעצור" },
+            { en: "car", he: "מכונית" }, { en: "bus", he: "אוטובוס" }, { en: "ball", he: "כדור" },
+            { en: "doll", he: "בובה" }, { en: "toy", he: "צעצוע" }, { en: "box", he: "קופסה" },
+            { en: "bed", he: "מיטה" }, { en: "clock", he: "שעון" }, { en: "fish", he: "דג" },
+            { en: "bird", he: "ציפור" }, { en: "flower", he: "פרח" }, { en: "tree", he: "עץ" },
+            { en: "sea", he: "ים" }, { en: "sky", he: "שמיים" }, { en: "rain", he: "גשם" },
+            { en: "snow", he: "שלג" }, { en: "food", he: "אוכל" }, { en: "pizza", he: "פיצה" },
+            { en: "cake", he: "עוגה" }, { en: "ice cream", he: "גלידה" }, { en: "breakfast", he: "ארוחת בוקר" },
+            { en: "lunch", he: "ארוחת צהריים" }, { en: "dinner", he: "ארוחת ערב" }, { en: "shoe", he: "נעל" },
+            { en: "shirt", he: "חולצה" }, { en: "hat", he: "כובע" }, { en: "pants", he: "מכנסיים" },
+            { en: "eye", he: "עין" }, { en: "nose", he: "אף" }, { en: "ear", he: "אוזן" },
+            { en: "mouth", he: "פה" }, { en: "hand", he: "יד" }, { en: "leg", he: "רגל" },
+            { en: "head", he: "ראש" }, { en: "smile", he: "חיוך" }, { en: "funny", he: "מצחיק" },
+            { en: "nice", he: "נחמד" }, { en: "sweet", he: "מתוק" }, { en: "clean", he: "נקי" },
+            { en: "hungry", he: "רעב" }, { en: "thirsty", he: "צמא" }, { en: "tired", he: "עייף" },
+            { en: "ready", he: "מוכן" }
+        ];
+const E=s=>`<span class="en-word">${s}</span>`;
+const RULES={
+'vocab-word':{t:'ללמוד מילה בתוך משפט',h:'דמייני את המילה בתוך משפט מהחיים שלך.',d:'מילה נשארת בראש כשלומדים אותה <b>בתוך משפט</b>, לא לבד.',e:'pool → We swim in the pool.'},
+'vocab-time':{t:'age · month · year',h:'חשבי: גיל, חלק משנה, או השנה כולה?',d:'<b>age</b> = גיל · <b>month</b> = חודש · <b>year</b> = שנה. בשנה אחת יש 12 חודשים.',e:'I am ten years old. · May is a nice month.',x:'על גיל אומרים <b>I am ten</b> (אני עשר) – לא "I have ten". ובמספר שגדול מ-1 מוסיפים s: ten year<b>s</b>.'},
+'vocab-also':{t:'also = גם',h:'איפה עומדת also? אחרי am/is/are או לפני פועל אחר?',d:'<b>also</b> = גם. היא באה <b>אחרי</b> am/is/are, ו<b>לפני</b> כל פועל אחר.',e:'I am also happy. · I also like pizza.',x:'בעברית אומרים "אני גם שמחה", באנגלית also נכנסת אחרי am.'},
+'vocab-different':{t:'different ↔ the same',h:'different הוא ההפך מ-the same.',d:'<b>different</b> = שונה. <b>the same</b> = אותו הדבר. הפכים!',e:'A cat and a dog are different.'},
+'vocab-same':{t:'the same – שתי מילים',h:'זה ביטוי של שתי מילים: the + same.',d:'<b>the same</b> = אותו הדבר. תמיד עם <b>the</b>.',e:'We are in the same school.',x:'לא כותבים "same" לבד ולא "thesame".'},
+'vocab-have':{t:'have = יש לי / להחזיק',h:'באנגלית אין "יש" – אומרים "אני מחזיקה".',d:'<b>have</b> = יש ל... / להחזיק. I have a pencil = יש לי עיפרון.',e:'I have a new pencil.',x:'have זה לא be! I <b>am</b> happy אבל I <b>have</b> a pencil.'},
+'vocab-ing':{t:'reading · drawing',h:'ing אחרי פועל = שם פעולה (קריאה, ציור).',d:'<b>reading</b> = קריאה, <b>drawing</b> = ציור. הוספנו ing לפועל (read, draw).',e:'Reading is fun. · Drawing is my hobby.'},
+'spell-double':{t:'אותיות כפולות',h:'יש במילה אות שמופיעה פעמיים ברצף.',d:'במילים hobby (bb), different (ff), school (oo), pool (oo) יש אותיות כפולות.',e:'ho<b>bb</b>y · di<b>ff</b>erent · sch<b>oo</b>l · p<b>oo</b>l',x:'ב-begin וב-birthday אין אות כפולה!'},
+'spell-th':{t:'th באמצע ובסוף מילה',h:'בצליל הזה יש שתי אותיות: t ו-h.',d:'<b>birthday</b> (bir<b>th</b>day) ו-<b>month</b> (mon<b>th</b>) כוללות th.',e:'bir<b>th</b>day · mon<b>th</b>',x:'month לא נכתבת "munth", למרות שנשמעת קצת ככה.'},
+'spell-silent-e':{t:'e אילמת בסוף',h:'יש אות בסוף שלא נשמעת.',d:'ב-age וב-have האות <b>e</b> בסוף שותקת – אבל חובה לכתוב אותה.',e:'ag<b>e</b> · hav<b>e</b>'},
+'spell-ea':{t:'ea = "אִי" ארוכה',h:'בצליל "אִי" יש שתי אותיות: e ו-a.',d:'<b>year</b> ו-<b>reading</b> נכתבות עם <b>ea</b>.',e:'y<b>ea</b>r · r<b>ea</b>ding'},
+'spell-two-words':{t:'the same = שתי מילים',h:'יש רווח באמצע.',d:'כותבים <b>the same</b> עם רווח – לא thesame.'},
+'spell-ing':{t:'הסיומת ing',h:'הסיומת ing בסוף.',d:'<b>draw + ing = drawing</b> · <b>read + ing = reading</b>.',x:'לא "draweing" ולא "drowing"!'},
+'spell-also':{t:'also = al + so',h:'מתחילה ב-al ונגמרת ב-so.',d:'<b>also</b> = al + so.'},
+'spell-begin':{t:'begin = be + gin',h:'be + gin.',d:'<b>begin</b> = be + gin. ההדגשה בהגייה על ההברה השנייה: be-GIN.'},
+'spell-pron':{t:'כינויי גוף באיות',h:'מילים קצרות – שימי לב לכל אות.',d:'<b>I</b> תמיד באות גדולה. שאר הכינויים באות קטנה באמצע משפט.'},
+'spell-sentence':{t:'כתיבת משפט',h:'מילה אחרי מילה – לא לשכוח am / is / are.',d:'במשפט: אות גדולה בהתחלה, נקודה בסוף, ו-I תמיד גדולה.'},
+'pron-I':{t:'I = אני',h:'מי מדבר?',d:'<b>I</b> = אני. תמיד באות גדולה.',e:'I am happy.'},
+'pron-you':{t:'you = אתה / את / אתם',h:'מדברים אל מישהו.',d:'<b>you</b> = המישהו (או המישהם) שאליהם מדברים.',x:'באנגלית אין הבדל בין אתה / את / אתם / אתן – הכול you.'},
+'pron-he':{t:'he = הוא',h:'בן או גבר אחד.',d:'<b>he</b> מחליף בן או גבר אחד (Tom, my father, the teacher).',e:'Tom → He'},
+'pron-she':{t:'she = היא',h:'בת או אישה אחת.',d:'<b>she</b> מחליף בת או אישה אחת (Dana, my mother).',e:'Dana → She'},
+'pron-it':{t:'it = זה / זאת',h:'חפץ או חיה אחת (לא אדם).',d:'<b>it</b> מחליף חפץ, מקום או חיה אחת.',e:'The pool → It · The cat → It',x:'it משמש גם למזג אוויר: It is sunny.'},
+'pron-we':{t:'we = אנחנו',h:'כולל אותי + עוד מישהו.',d:'<b>we</b> = אני + עוד אנשים.',e:'Dana and I → We'},
+'pron-they':{t:'they = הם / הן',h:'כמה אנשים או כמה דברים (לא אותי ולא אותך).',d:'<b>they</b> מחליף כמה אנשים או חפצים.',e:'The students → They · Tom and Dana → They',x:'they זה גם "הם" וגם "הן".'},
+'be-need':{t:'חובה פועל בכל משפט',h:'בעברית אפשר בלי פועל. באנגלית – לא.',d:'בעברית: "אני שמחה". באנגלית חייבים פועל be: <b>I am happy</b>.'},
+'be-am':{t:'I + am',h:'מי הנושא? רק מילה אחת הולכת עם am.',d:'<b>I am</b>. רק I הולך עם am.',e:'I am happy. · I\'m ten.'},
+'be-is':{t:'he / she / it + is',h:'הנושא הוא אחד (בן, בת או דבר אחד).',d:'<b>he, she, it</b> וכל שם של אדם או דבר אחד הולכים עם <b>is</b>.',e:'She is a doctor. · The pool is big.'},
+'be-are':{t:'we / you / they + are',h:'הנושא הוא רבים – או you.',d:'<b>we, you, they</b> וכל שם ברבים הולכים עם <b>are</b>.',e:'We are at the park. · The cats are small.',x:'you הולך תמיד עם are, גם כשמדברים אל ילדה אחת.'},
+'be-neg':{t:'not אחרי am / is / are',h:'איפה שמים not? מיד אחרי הפועל.',d:'כדי לשלול מוסיפים <b>not</b> מיד אחרי am / is / are.',e:'She is <b>not</b> a doctor.'},
+'be-contr':{t:'קיצורים: isn\'t · aren\'t',h:'is not ו-are not מתקצרים.',d:'<b>is not = isn\'t</b> · <b>are not = aren\'t</b>. הגרש ( \' ) מחליף את האות o שנעלמה.',e:'It isn\'t big. · They aren\'t at school.'},
+'be-amnot':{t:'am not – בלי קיצור',h:'am not לא מתקצר כמו האחרים.',d:'<b>am not</b> לא הופך ל-amn\'t. כותבים <b>I am not</b> או <b>I\'m not</b>.',x:'amn\'t לא קיים באנגלית רגילה!'},
+'order':{t:'סדר המילים במשפט',h:'מי? → am/is/are → (not) → המשך.',d:'<b>נושא → am/is/are → (not) → המשך המשפט</b>',e:'She → is → not → a doctor'},
+'speak-th0':{t:'th "דקה" – לשון בחוץ',h:'קצה הלשון מעט בחוץ בין השיניים, ונושפים.',d:'במילים three, thank, month, birthday: מוציאים קצה לשון בין השיניים ונושפים אוויר בעדינות – כמו <b>ס דקה ועדינה</b>. לא t ולא s!'},
+'speak-th1':{t:'th "קולית" – כמו ז רכה',h:'אותה תנוחה, אבל עם קול ברטט בגרון.',d:'במילים the, this, that, these, those, they, mother, father: קצה הלשון בין השיניים + <b>קול</b> – כמו <b>ז רכה</b>. לא d ולא z!'},
+'speak-word':{t:'הגייה של מילים',h:'דברי לאט, הברה אחרי הברה.',d:'דברי לאט וברור. שימי לב להברה המודגשת (CAPITAL) בכל מילה.'},
+'speak-sentence':{t:'הגייה של משפט',h:'מילה אחרי מילה, בלי למהר.',d:'אמרי כל מילה בנפרד, ואז חברי. שימי לב ל-th ול-w (ו אנגלית, לא v).'}
+};
+const ANEC={
+'vocab-time':['ידעת? ב-ten years old אומרים years ברבים, אבל כשאומרים I am ten – בכלל לא צריך years 😉'],
+'vocab-also':['ידעת? also לא אוהבת להיות בסוף משפט. היא תמיד באמצע, ליד הפועל!'],
+'vocab-same':['ידעת? the same + different = שני הפכים. אם למדת אחד – למדת שניים!'],
+'vocab-have':['ידעת? ב-I have a pencil אין am בכלל – כי have ו-be הם שני פעלים שונים.'],
+'spell-double':['טיפ: אותיות כפולות הן כמו תאומים – hobby, different, school, pool 👯'],
+'spell-th':['ידעת? ב-birthday וב-month ה-th מגיעה מצירוף של שני צלילים שאין בעברית – לכן דוברי עברית נוטים לאבד אותו.'],
+'spell-silent-e':['ידעת? e אילמת היא כמו נינג׳ה – לא רואים/שומעים אותה, אבל היא שם 🥷'],
+'spell-ea':['ידעת? year ו-reading נשמעות כמו "יִיר" ו"רִידינג" – שתי המילים עם אותו ea!'],
+'pron-I':['ידעת? I היא המילה היחידה באנגלית שתמיד באות גדולה – כי היא חשובה… זאת את! 😉'],
+'pron-it':['ידעת? it שימושית כל כך שאומרים גם It is sunny / It is late – "זה" שאין לו שם 🌤️'],
+'pron-they':['ידעת? they זו גם "הם" וגם "הן" – אחת מהמילים הכי חסכוניות באנגלית!'],
+'pron-you':['ידעת? פעם היה באנגלית גם thou ל"אתה" – היום נשאר רק you לכולם 😄'],
+'pron-we':['טיפ: we = אני + עוד מישהו. Dana and I → We.'],
+'pron-he':['טיפ: he הוא כמו "הוא" – רק קצר. He is my father.'],
+'pron-she':['טיפ: she נשמע כמו "שִׁי" – ויש בה את האות h אחרי s!'],
+'be-need':['ידעת? באנגלית אפילו "I am ten" צריכה פועל – בעברית היינו אומרות פשוט "אני עשר".'],
+'be-am':['ידעת? am הוא כמו חבר אישי של I – הם לא הולכים בלי להתחבק: I am 🫶'],
+'be-is':['ידעת? is היא מילה של 2 אותיות בלבד, אבל בלעדיה אין משפט!'],
+'be-are':['טיפ: אם הנושא הוא "יותר מאחד" – are תמיד מגיעה, כמו ארמיה של מילים 😄'],
+'be-neg':['ידעת? not היא שומרת סף: היא תמיד עומדת מיד אחרי am/is/are.'],
+'be-contr':['ידעת? הגרש ב-isn\'t הוא "ארגז" שמחזיק את ה-o שנעלמה – is n<b>o</b>t → isn\'t.'],
+'be-amnot':['ידעת? אפילו דוברי אנגלית לא אומרים amn\'t – הם אומרים I\'m not. זה היוצא מהכלל המפורסם ביותר!'],
+'order':['טיפ: נושא → be → שאר המשפט. מי? מה הוא? איפה הוא?'],
+'speak-th0':['ידעת? אפילו בצרפת ובגרמניה מתקשים עם th – את בחברה טובה! 🦷'],
+'speak-th1':['ידעת? בקול של the אפשר להרגיש רטט בגרון – שימי יד על הצוואר ובדקי! 🖐️'],
+'speak-word':['טיפ: דברי כאילו את מורה לאנגלית – לאט, בביטחון! 🎤'],
+'speak-sentence':['טיפ: משפט טוב נשמע כמו שיר – אל תעצרי באמצע 🎶']
+};
+const CHEERS=['מעולה!','כל הכבוד מיה!','בול!','מדויק!','וואו, את שולטת!','יפה מאוד!','אלופה! 🏆'];
+/* intros */
+function ruleCards(keys){return keys.map(k=>{const r=RULES[k];return `<div class="rule" id="rule-${k}"><b class="t">📌 ${r.t}</b><div>${r.d}</div>${r.e?`<div class="ex">${r.e}</div>`:''}${r.x?`<div class="xc">⚠️ יוצא מן הכלל: ${r.x}</div>`:''}</div>`}).join('')}
+const wordTable=(arr)=>`<table class="gt"><tr><th>English</th><th>עברית</th><th>דוגמה</th></tr>${arr.map(w=>`<tr><td>${E(w.en)}</td><td>${w.he}</td><td style="direction:ltr;text-align:left">${w.ex}</td></tr>`).join('')}</table>`;
+const sayBtns=(a)=>a.map(w=>`<button class="say" onclick="speak('${w}',.8)">🔊 ${w}</button>`).join('');
+const INTROS=[
+`<p>במבחן צריך לדעת <b>מה פירוש כל מילה</b> ולהשתמש בה במשפט. כאן 14 מילות הנושא (כינויי הגוף ב<b>לשונית 3</b>). לחצי על מילה כחולה לתרגום ושמע 🔊</p>${wordTable(W)}<h4>🏅 כללי זהב</h4>${ruleCards(['vocab-word','vocab-time','vocab-also','vocab-different','vocab-same','vocab-have','vocab-ing'])}<p style="color:var(--mu);font-size:.88rem">תרגול נוסף: <a href="https://wordwall.net/resource/23134693" target="_blank" style="color:var(--blue)">Wordwall 1</a> · <a href="https://wordwall.net/resource/2785828" target="_blank" style="color:var(--blue)">Wordwall 2</a></p>`,
+`<p>במבחן יהיה צריך <b>לכתוב</b> את המילים נכון, אות אחרי אות. בכל תרגיל תשמעי את המילה (או המשפט), ותכתבי. אם טעית – תקבלי רמז דק, ובניסיון החמישי התשובה תיחשף.</p><h4>🧠 טריקים לזכירה</h4><table class="gt"><tr><th>מילה</th><th>טריק</th></tr>
+<tr><td>${E('different')}</td><td>dif-fer-ent · שני f</td></tr><tr><td>${E('hobby')}</td><td>ho-bb-y · שני b</td></tr><tr><td>${E('school')}</td><td>s-ch-oo-l · שני o</td></tr><tr><td>${E('pool')}</td><td>p-oo-l · שני o</td></tr><tr><td>${E('birthday')}</td><td>birth + day</td></tr><tr><td>${E('month')}</td><td>mon + th</td></tr><tr><td>${E('year')}</td><td>y + ear (אוזן!)</td></tr><tr><td>${E('age')}</td><td>ag + e אילמת</td></tr><tr><td>${E('begin')}</td><td>be + gin</td></tr></table><h4>🏅 כללי זהב ויוצאים מן הכלל</h4>${ruleCards(['spell-double','spell-th','spell-silent-e','spell-ea','spell-two-words','spell-ing','spell-also','spell-begin','spell-pron','spell-sentence'])}`,
+`<p>כינויי גוף מחליפים שמות כדי לא לחזור עליהם. יש 7 – וחייבים לשלוט בכולם:</p><table class="gt"><tr><th>כינוי</th><th>עברית</th><th>מחליף</th></tr><tr><td>${E('I')}</td><td>אני</td><td>אני עצמי (Mia → I)</td></tr><tr><td>${E('you')}</td><td>אתה / את / אתם</td><td>מי שמדברים אליו</td></tr><tr><td>${E('he')}</td><td>הוא</td><td>Tom, my father</td></tr><tr><td>${E('she')}</td><td>היא</td><td>Dana, my mother, a doctor</td></tr><tr><td>${E('it')}</td><td>זה / זאת</td><td>The pool, the cat, the book</td></tr><tr><td>${E('we')}</td><td>אנחנו</td><td>Dana and I</td></tr><tr><td>${E('they')}</td><td>הם / הן</td><td>The students, Tom and Dana, the books</td></tr></table><h4>🔍 שיטת "3 שאלות"</h4><div class="rule">1) האם אני מדברת על עצמי? → <b>I</b> / על כמה כולל אותי? → <b>we</b><br>2) האם מדברים אל מישהו? → <b>you</b><br>3) אדם אחד? בן → <b>he</b>, בת → <b>she</b>, דבר אחד → <b>it</b>. יותר מאחד → <b>they</b></div><h4>🏅 כללי זהב ויוצאים מן הכלל</h4>${ruleCards(['pron-I','pron-you','pron-he','pron-she','pron-it','pron-we','pron-they'])}`,
+`<p>בעברית אומרים "אני שמחה". באנגלית <b>חייבים פועל בכל משפט</b> – הפועל Be (להיות), בהווה יש לו שלוש צורות: <b>am · is · are</b>.</p><table class="gt"><tr><th>נושא</th><th>Be</th><th>משפט מהמסמך</th></tr><tr><td>${E('I')}</td><td>am</td><td>I am happy</td></tr><tr><td>${E('you')}</td><td>are</td><td>You are happy</td></tr><tr><td>${E('she')}</td><td>is</td><td>She is a doctor</td></tr><tr><td>${E('he')}</td><td>is</td><td>He is my father</td></tr><tr><td>${E('it')}</td><td>is</td><td>It is big</td></tr><tr><td>${E('we')}</td><td>are</td><td>We are at the park</td></tr><tr><td>${E('they')}</td><td>are</td><td>They are at school</td></tr></table><div class="rule"><b class="t">🔑 חוק ההתאמה המשולש</b><br>1) <b>I → am</b> · 2) <b>he / she / it (אחד) → is</b> · 3) <b>we / you / they (רבים) → are</b><br>שמות: Tom → he → is · Tom and Dana → they → are</div><h4>🏅 כללי זהב ויוצאים מן הכלל</h4>${ruleCards(['be-need','be-am','be-is','be-are'])}<p style="color:var(--mu);font-size:.88rem"><a href="https://wordwall.net/resource/37758702/efl/verb-to-be-present" target="_blank" style="color:var(--blue)">Wordwall: Verb to be</a></p>`,
+`<p>כדי להפוך משפט לשלילי, מוסיפים <b>not</b> מיד אחרי am / is / are. הרבה פעמים מקצרים:</p><table class="gt"><tr><th>מלא</th><th>מקוצר</th><th>עברית</th></tr><tr><td>${E('I am not happy')}</td><td>I\'m not happy</td><td>אני לא שמחה</td></tr><tr><td>${E('You are not happy')}</td><td>You aren\'t happy</td><td>את לא שמחה</td></tr><tr><td>${E('She is not a doctor')}</td><td>She isn\'t a doctor</td><td>היא לא רופאה</td></tr><tr><td>${E('He is not my father')}</td><td>He isn\'t my father</td><td>הוא לא אבא שלי</td></tr><tr><td>${E('It is not big')}</td><td>It isn\'t big</td><td>זה לא גדול</td></tr><tr><td>${E('We are not at the park')}</td><td>We aren\'t at the park</td><td>אנחנו לא בפארק</td></tr><tr><td>${E('They are not at school')}</td><td>They aren\'t at school</td><td>הם לא בבית ספר</td></tr></table><h4>🏅 כללי זהב ויוצאים מן הכלל</h4>${ruleCards(['be-neg','be-contr','be-amnot'])}<p style="color:var(--mu);font-size:.88rem"><a href="https://wordwall.net/resource/37758833/efl/verb-to-be-negative-present" target="_blank" style="color:var(--blue)">Wordwall: negative verb to be</a></p>`,
+`<p>במעבדה מחברים הכול: מסדרים משפטים, מתקנים שגיאות והופכים משפטים מחיובי לשלילי ולהפך. השיטה:</p><div class="rule"><b class="t">🧪 4 צעדים</b><br>1) מי הנושא? · 2) איזה Be מתאים (am/is/are)? · 3) צריך not? · 4) מה ממשיך?</div>${ruleCards(['order','be-need','be-neg','be-contr'])}<h4>🚫 שגיאות נפוצות</h4><div class="rule"><span class="en" style="direction:ltr;display:inline-block">She a doctor ✗ (חסר is)</span><br><span style="direction:ltr;display:inline-block">I is happy ✗ (I → am)</span><br><span style="direction:ltr;display:inline-block">He not is big ✗ (not אחרי is)</span><br><span style="direction:ltr;display:inline-block">I amn\'t tired ✗ (אין amn\'t)</span></div>`,
+`<p>1) לחצי <b>"אני יודעת!"</b> בכרטיס, 2) הוכיחי: כתבי בעברית או אמרי למיקרופון. רק אם נכון – המילה נספרת כ"מוכרת". 3) למטה: תרגילי דיבור.</p><h4>🎙️ מדריך הגייה לדוברי עברית</h4><div class="th-box"><div class="th-card th0"><b>th "דקה" 🦷</b><br>קצה הלשון <b>בחוץ</b> בין השיניים, ונושפים בעדינות – כמו <b>ס דקה</b> ועדינה יותר.<br><div style="margin-top:6px">${sayBtns(['three','thank you','month','birthday','think','thirsty'])}</div><div class="xc" style="color:#fca5a5">❌ לא "טרי / סנק / מונס"!</div></div><div class="th-card th1"><b>th "קולית" – כמו ז רכה 🔔</b><br>אותה תנוחה, אבל עם <b>קול</b> (רטט בגרון) – כמו <b>ז רכה</b>. מופיעה ב: the, this, that, these, those, they, mother, father.<br><div style="margin-top:6px">${sayBtns(['the','this','that','these','those','they','mother','father'])}</div><div class="xc" style="color:#fca5a5">❌ לא "זה / דה / דיס"!</div></div></div><div class="rule"><b class="t">עוד מלכודות לדוברי עברית</b><br>• <b>w</b> (we, week): שפתיים מעוגלות כמו "וו" – לא v.<br>• <b>r</b>: בלי גרון, הלשון לא נוגעת בחך.<br>• <b>ch</b> ב-school נשמע <b>k</b>: סקול.<br>• <b>ea</b> ב-year/reading: "אִי" ארוכה.<br>• ההדגשה: <b>be-GIN</b>, <b>DIF-rent</b>, <b>HOB-ee</b>, <b>BIRTH-day</b>.<div style="margin-top:6px">${sayBtns(['we','week','school','year','reading','begin','different','hobby'])}</div></div><h4>🏅 כללים</h4>${ruleCards(['speak-th0','speak-th1','speak-word','speak-sentence'])}`,
+`<p>20 שאלות חדשות (נבחרות אקראית מתוך מאגר של 30), 20 דקות, בלי רמזים. בסוף – ציון, ניתוח לפי נושאים, הסברים, וכפתור לשליחת התוצאה בוואטסאפ.</p>`
+];
+/* ===================== EXERCISE BANK ===================== */
+const mc=(q,opts,ans,rule,o={})=>({type:'mcq',q,opts,ans,rule,...o});
+const ty=(q,answers,rule,o={})=>({type:'type',q,answers:[].concat(answers),rule,...o});
+const sc=(q,sentence,rule,o={})=>({type:'scr',q,sentence,rule,...o});
+const sel=(arr,n,ex)=>shuffle(arr.filter(x=>x!==ex)).slice(0,n);
+const HE=W.map(w=>w.he), EN=W.map(w=>w.en);
+const beR=a=>({am:'be-am',is:'be-is',are:'be-are'}[a]);
+const BEH='הנושא הוא I, אחד (he/she/it) או רבים (we/you/they)?';
+const EX=[[],[],[],[],[],[],[]];
+/* TAB 0 – vocabulary (40) */
+W.forEach(w=>EX[0].push(mc(`מה פירוש <span class="en-word">${w.en}</span>?`,[w.he,...sel(HE,3,w.he)],w.he,w.r,{fun:w.fun,say:w.en})));
+W.filter(w=>!['have','reading'].includes(w.en)).forEach(w=>EX[0].push(mc(`השלימי: <span class="en">${w.cl.replace('___','_____')}</span>`,[w.en,...sel(EN,3,w.en)],w.en,w.r,{fun:w.fun,opt_ltr:1,say:w.ex})));
+W.forEach(w=>EX[0].push(mc(`איך אומרים באנגלית: <b>${w.he}</b>?`,[w.en,...sel(EN,3,w.en)],w.en,w.r,{fun:w.fun,opt_ltr:1,say:w.en})));
+/* TAB 1 – spelling dictation (40) */
+W.forEach(w=>EX[1].push(ty(`🔊 שמעי וכתבי באנגלית: <b>${w.he}</b>`,[w.en],w.sp,{dict:w.en,fun:w.fun})));
+P.forEach(p=>EX[1].push(ty(`🔊 שמעי וכתבי באנגלית: <b>${p[1]}</b>`,[p[0]],'spell-pron',{dict:p[0]})));
+[['I am happy','אני שמחה'],['You are happy','את שמחה'],['She is a doctor','היא רופאה'],['He is my father','הוא אבא שלי'],['It is big','זה גדול'],['We are at the park','אנחנו בפארק'],['They are at school','הם בבית ספר'],['My birthday is in May','יום ההולדת שלי במאי'],['I have a hobby','יש לי תחביב'],['We are in the same school','אנחנו באותו בית ספר'],['They are different','הם שונים'],['I also like reading','אני גם אוהבת לקרוא'],['Drawing is my hobby','ציור הוא התחביב שלי'],['We begin school today','אנחנו מתחילים בית ספר היום'],['The pool is big','הבריכה גדולה'],['I am ten years old','אני בת עשר'],['It is a new month','זה חודש חדש'],['This year is different','השנה הזאת שונה'],['I am not at school','אני לא בבית ספר']].forEach(s=>EX[1].push(ty(`🔊 שמעי וכתבי את המשפט: <b>${s[1]}</b>`,[s[0]],'spell-sentence',{dict:s[0]})));
+/* TAB 2 – pronouns (40) */
+P.forEach(p=>EX[2].push(mc(`מה פירוש <span class="en-word">${p[0]}</span>?`,[p[1],...sel(P.map(x=>x[1]),3,p[1])],p[1],'pron-'+p[0],{say:p[0]})));
+P.forEach(p=>EX[2].push(mc(`איך אומרים באנגלית: <b>${p[1]}</b>?`,[p[0],...sel(P.map(x=>x[0]),3,p[0])],p[0],'pron-'+p[0],{say:p[0]})));
+[['Dana','she','בת אחת'],['Tom','he','בן אחד'],['My father','he','גבר אחד'],['The cat','it','חיה אחת'],['The pool','it','דבר אחד'],['The students','they','יותר מאחד'],['Dana and I','we','כולל אותי'],['My mother','she','אישה אחת'],['Dana and Tom','they','שניים (לא אני)'],['You and I','we','אתך ואותי'],['Mia (מדברת על עצמה)','I','מי מדברת?'],['The teacher (a man)','he','גבר'],['The dogs','they','כמה חיות'],['The book','it','חפץ אחד']].forEach(t=>EX[2].push(mc(`באיזה כינוי גוף מחליפים: <span class="en">${t[0]}</span> ?`,[t[1],...sel(P.map(x=>x[0]),3,t[1])],t[1],'pron-'+t[1],{hint:'רמז: '+t[2]+'.',say:t[1]})));
+[['___ is my father.','he'],['___ am happy.','I'],['___ are at the park. (Dana and I)','we'],['___ is a doctor. (Dana)','she'],['___ is big. (the pool)','it'],['___ are at school. (the students)','they']].forEach(t=>EX[2].push(mc(`השלימי: <span class="en">${t[0].replace('___','_____')}</span>`,[t[1],...sel(P.map(x=>x[0]),3,t[1])],t[1],'pron-'+t[1])));
+[['אנחנו','we'],['הם','they'],['היא','she'],['אני','I'],['הוא','he'],['זה','it']].forEach(t=>EX[2].push(ty(`כתבי באנגלית: <b>${t[0]}</b>`,[t[1]],'pron-'+t[1],{say:t[1]})));
+/* TAB 3 – to be affirmative (40) */
+[['I ___ happy.','am'],['You ___ happy.','are'],['She ___ a doctor.','is'],['He ___ my father.','is'],['It ___ big.','is'],['We ___ at the park.','are'],['They ___ at school.','are'],['I ___ ten years old.','am'],['My mother ___ a teacher.','is'],['The cat ___ small.','is'],['The pool ___ blue.','is'],['Dana and I ___ friends.','are'],['Tom and Dana ___ in the same class.','are'],['The students ___ happy.','are'],['My birthday ___ in May.','is'],['You and I ___ at school.','are'],['The dogs ___ at the park.','are'],['Drawing ___ my hobby.','is'],['I ___ at the pool.','am'],['We ___ in the same school.','are'],['May ___ a nice month.','is'],['She ___ ten years old.','is'],['They ___ different.','are'],['My friends ___ at the park.','are']].forEach(t=>EX[3].push(mc(`השלימי עם am / is / are:<br><span class="en" style="font-size:1.3rem">${t[0].replace('___','_____')}</span>`,['am','is','are'],t[1],beR(t[1]),{hint:BEH,opt_ltr:1,say:t[0].replace('___',t[1])})));
+[['אני שמחה','I am happy'],['היא רופאה','She is a doctor'],['הוא אבא שלי','He is my father'],['זה גדול','It is big'],['אנחנו בפארק','We are at the park'],['הם בבית ספר','They are at school'],['את שמחה','You are happy'],['יום ההולדת שלי במאי','My birthday is in May']].forEach(t=>EX[3].push(ty(`תרגמי לאנגלית: <b>${t[0]}</b>`,[t[1]],'be-need',{say:t[1]})));
+['She is a doctor','We are at the park','They are at school','My hobby is drawing','He is my father','It is a big pool','You are my friend','I am ten years old'].forEach(s=>EX[3].push(sc('סדרי את המשפט:',s,'order',{say:s})));
+/* TAB 4 – to be negative (40) */
+[['I ___ happy.','am not'],['She ___ a doctor.','isn\'t'],['They ___ at school.','aren\'t'],['He ___ my father.','isn\'t'],['We ___ at the park.','aren\'t'],['It ___ big.','isn\'t'],['You ___ sad.','aren\'t'],['My mother ___ at home.','isn\'t'],['The cats ___ small.','aren\'t'],['I ___ tired.','am not'],['Tom ___ in the pool.','isn\'t'],['Dana and I ___ different.','aren\'t'],['The pool ___ small.','isn\'t'],['My friends ___ at school today.','aren\'t']].forEach(t=>EX[4].push(mc(`בחרי את הצורה השלילית:<br><span class="en" style="font-size:1.3rem">${t[0].replace('___','_____')}</span>`,['am not','isn\'t','aren\'t'],t[1],t[1]==='am not'?'be-amnot':'be-contr',{hint:BEH,opt_ltr:1,say:t[0].replace('___',t[1])})));
+[['I am happy','I am not happy'],['You are happy','You are not happy'],['She is a doctor','She is not a doctor'],['He is my father','He is not my father'],['It is big','It is not big'],['We are at the park','We are not at the park'],['They are at school','They are not at school'],['The pool is blue','The pool is not blue'],['My mother is a teacher','My mother is not a teacher'],['I am ten years old','I am not ten years old']].forEach(t=>EX[4].push(ty(`הפכי לשלילי (אפשר גם עם קיצור):<br><span class="en">${t[0]}</span>`,[t[1]],'be-neg',{say:t[1]})));
+['I am not happy','She is not a doctor','He isn\'t my father','It isn\'t big','We aren\'t at the park','They are not at school','You aren\'t my sister','I am not at the pool'].forEach(s=>EX[4].push(sc('סדרי את המשפט השלילי:',s,'be-neg',{say:s})));
+[['מהו הקיצור של <span class="en">is not</span>?',['isn\'t','aren\'t','amn\'t'],'isn\'t','be-contr'],['מהו הקיצור של <span class="en">are not</span>?',['aren\'t','isn\'t','arn\'t'],'aren\'t','be-contr'],['איזו צורה <b>לא קיימת</b> באנגלית?',['amn\'t','isn\'t','aren\'t'],'amn\'t','be-amnot'],['קצרי: <span class="en">He is not my father</span>',['He isn\'t my father','He aren\'t my father','He amn\'t my father'],'He isn\'t my father','be-contr'],['קצרי: <span class="en">They are not at school</span>',['They aren\'t at school','They isn\'t at school','They amn\'t at school'],'They aren\'t at school','be-contr'],['איך מקצרים <span class="en">I am not</span>?',['I\'m not','I amn\'t','I isn\'t'],'I\'m not','be-amnot'],['מה הכתיב הנכון?',['isn\'t','is\'nt','isnt\''],'isn\'t','be-contr'],['איזה משפט נכון?',['She is not happy','She not is happy','She no is happy'],'She is not happy','be-neg']].forEach(t=>EX[4].push(mc(t[0],t[1],t[2],t[3],{opt_ltr:1})));
+/* TAB 5 – sentence lab (40) */
+[['She is a doctor','She a doctor','She are a doctor'],['I am happy','I is happy','I are happy'],['They are at school','They is at school','They am at school'],['He isn\'t my father','He aren\'t my father','He amn\'t my father'],['It is not big','It not is big','It no is big'],['We are at the park','We is at the park','We am at the park'],['You are happy','You am happy','You is happy'],['I\'m not tired','I amn\'t tired','I isn\'t tired'],['The pool is big','The pool are big','The pool am big'],['My friends are nice','My friends is nice','My friend are nice'],['She isn\'t at school','She are not at school','She aren\'t at school'],['Dana and I are friends','Dana and I am friends','Dana and I is friends']].forEach(t=>EX[5].push(mc('איזה משפט נכון?',t,t[0],'order',{opt_ltr:1,hint:'בדקי: מי הנושא? איזה Be מתאים? איפה not?',say:t[0]})));
+['My birthday is in May','We are in the same school','They are not different','My hobby is reading','She is not at the pool','It is a new year','You aren\'t at the pool','Dana is my friend','The pool is not small','Drawing is my hobby','This month is different','He is ten years old','We are not at school','The students are in the pool'].forEach(s=>EX[5].push(sc('סדרי את המשפט:',s,'order',{say:s})));
+[['He is happy','He is not happy'],['They aren\'t at school','They are at school'],['I am not sad','I am sad'],['She is my friend','She is not my friend'],['It isn\'t a cat','It is a cat'],['We are at school','We are not at school'],['You aren\'t ten','You are ten'],['The cat is big','The cat is not big']].forEach(t=>EX[5].push(ty(`הפכי (חיובי ↔ שלילי):<br><span class="en">${t[0]}</span>`,[t[1]],t[0].includes('not')||t[0].includes('n\'t')?'be-neg':'be-neg',{say:t[1]})));
+[['הם לא בפארק',['They are not at the park','They are not in the park']],['אני לא עייפה',['I am not tired']],['הבריכה גדולה',['The pool is big']],['אנחנו לא באותו בית ספר',['We are not in the same school','We are not at the same school']],['היא בת עשר',['She is ten years old','She is ten']],['זה לא התחביב שלי',['It is not my hobby']]].forEach(t=>EX[5].push(ty(`תרגמי לאנגלית: <b>${t[0]}</b>`,t[1],'be-need',{say:t[1][0]})));
+/* TAB 6 – speaking (40) */
+const TH0=new Set(['three','thank','thirsty','month','birthday','think','thursday']);
+const TH1=new Set(['the','this','that','these','those','they','mother','father','brother','then','there','with']);
+const SPK=[['three','שלוש','speak-th0'],['thank you','תודה','speak-th0'],['thirsty','צמא','speak-th0'],['month','חודש','speak-th0'],['birthday','יום הולדת','speak-th0'],['think','לחשוב','speak-th0'],['Thursday','יום חמישי','speak-th0'],['the','ה־','speak-th1'],['this','זה','speak-th1'],['that','ההוא','speak-th1'],['these','אלה','speak-th1'],['those','אלה (רחוק)','speak-th1'],['they','הם','speak-th1'],['mother','אמא','speak-th1'],['father','אבא','speak-th1'],['brother','אח','speak-th1'],['age','גיל','speak-word'],['also','גם','speak-word'],['begin','להתחיל','speak-word'],['different','שונה','speak-word'],['hobby','תחביב','speak-word'],['pool','בריכה','speak-word'],['the same','אותו דבר','speak-th1'],['year','שנה','speak-word'],['school','בית ספר','speak-word'],['reading','קריאה','speak-word'],['I am happy','אני שמחה','speak-sentence'],['You are happy','את שמחה','speak-sentence'],['She is a doctor','היא רופאה','speak-sentence'],['He is my father','הוא אבא שלי','speak-sentence'],['It is big','זה גדול','speak-sentence'],['We are at the park','אנחנו בפארק','speak-sentence'],['They are at school','הם בבית ספר','speak-sentence'],['I am not happy','אני לא שמחה','speak-sentence'],['She is not a doctor','היא לא רופאה','speak-sentence'],['They are not at school','הם לא בבית ספר','speak-sentence'],['My birthday is this month','יום ההולדת שלי החודש','speak-th0'],['The pool is the same','הבריכה אותו דבר','speak-th1'],['This year is different','השנה הזאת שונה','speak-th1'],['I also have a hobby','יש לי גם תחביב','speak-sentence']];
+SPK.forEach(s=>EX[6].push({type:'speak',text:s[0],he:s[1],rule:s[2]}));
+EX.forEach((a,t)=>a.forEach((e,i)=>{e.id=`t${t}_${i}`;e.tab=t}));
+/* ===================== EXAM POOL (30) ===================== */
+const mq=(topic,q,opts,ans,rule)=>({topic,q,opts,ans,rule});
+const EXAM_POOL=[
+mq('vocab','מה פירוש <span class="en">month</span>?',['חודש','שנה','גיל','תחביב'],'חודש','vocab-time'),
+mq('vocab','I ___ like pizza and cake.',['also','month','age','pool'],'also','vocab-also'),
+mq('vocab','Dana and I have ___ bag. They look alike!',['the same','different','begin','hobby'],'the same','vocab-same'),
+mq('vocab','מה פירוש <span class="en">hobby</span>?',['תחביב','בריכה','בית ספר','גיל'],'תחביב','vocab-word'),
+mq('vocab','How old are you? What is your ___?',['age','year','pool','hobby'],'age','vocab-time'),
+mq('vocab','We swim in the ___.',['pool','school','year','month'],'pool','vocab-word'),
+mq('pron','באיזה כינוי מחליפים <span class="en">Dana and Tom</span>?',['they','we','she','it'],'they','pron-they'),
+mq('pron','באיזה כינוי מחליפים <span class="en">My father</span>?',['he','she','it','they'],'he','pron-he'),
+mq('pron','באיזה כינוי מחליפים <span class="en">The book</span>?',['it','he','they','we'],'it','pron-it'),
+mq('pron','איך אומרים באנגלית: <b>אנחנו</b>?',['we','they','you','it'],'we','pron-we'),
+mq('pron','איזה כינוי גוף נכתב תמיד באות גדולה?',['I','he','we','you'],'I','pron-I'),
+mq('pron','באיזה כינוי מחליפים <span class="en">You and I</span>?',['we','they','you','she'],'we','pron-we'),
+mq('bep','We ___ at the park.',['are','is','am','be'],'are','be-are'),
+mq('bep','She ___ ten years old.',['is','are','am','be'],'is','be-is'),
+mq('bep','I ___ happy.',['am','is','are','be'],'am','be-am'),
+mq('bep','My cat ___ big.',['is','are','am','be'],'is','be-is'),
+mq('bep','They ___ my friends.',['are','is','am','be'],'are','be-are'),
+mq('bep','He ___ my brother.',['is','are','am','be'],'is','be-is'),
+mq('ben','She ___ at school today.',['isn\'t','aren\'t','am not','no'],'isn\'t','be-contr'),
+mq('ben','I ___ sad.',['am not','isn\'t','aren\'t','not'],'am not','be-amnot'),
+mq('ben','They ___ at the park.',['aren\'t','isn\'t','am not','not'],'aren\'t','be-contr'),
+mq('ben','It ___ big.',['isn\'t','aren\'t','am not','no'],'isn\'t','be-contr'),
+mq('ben','We ___ in the pool.',['aren\'t','isn\'t','am not','not'],'aren\'t','be-contr'),
+mq('ben','איזה הוא הקיצור הנכון של <span class="en">is not</span>?',['isn\'t','is\'nt','amn\'t','aren\'t'],'isn\'t','be-contr'),
+mq('spell','איזו מילה כתובה נכון?',['different','diferent','diffrent','difrent'],'different','spell-double'),
+mq('spell','איזו מילה כתובה נכון?',['birthday','berthday','birthdey','burthday'],'birthday','spell-th'),
+mq('spell','איזו מילה כתובה נכון?',['school','scool','skool','shcool'],'school','spell-double'),
+mq('spell','איזו מילה כתובה נכון?',['month','munth','mounth','monht'],'month','spell-th'),
+mq('spell','איזו מילה כתובה נכון?',['hobby','hoby','hobbi','hobie'],'hobby','spell-double'),
+mq('spell','איזו מילה כתובה נכון?',['year','yeer','yere','yaer'],'year','spell-ea')
+];
+const TOPICS=[{k:'vocab',n:'אוצר מילים',i:'📖'},{k:'pron',n:'כינויי גוף',i:'👤'},{k:'bep',n:'Be חיובי',i:'➕'},{k:'ben',n:'Be שלילי',i:'➖'},{k:'spell',n:'איות',i:'✍️'}];
+/* ===================== STATE (auto-saved) ===================== */
+const KEY='mia_a1_unit1_v3';
+let S={v:2,xp:0,ex:{},cur:{},cards:{},fcIdx:0,fcFilter:'all',tab:0,streak:1,lastDay:'',day:{d:'',n:0},exam:null,lastExam:null,rw:{},phone:'',sound:true,lvl:1};
+function loadState(){try{const j=JSON.parse(localStorage.getItem(KEY)||'null');if(j&&j.v===2)S={...S,...j}}catch(e){}
+  const td=new Date().toDateString();if(S.lastDay!==td){const y=new Date(Date.now()-864e5).toDateString();S.streak=S.lastDay===y?S.streak+1:1;S.lastDay=td}
+  if(S.day.d!==td)S.day={d:td,n:0}}
+let _t;function flush(){try{S.u=Date.now();const j=JSON.stringify(S);localStorage.setItem(KEY,j);idb('put',j)}catch(e){}}
+function save(){clearTimeout(_t);_t=setTimeout(flush,120);updateAll()}
+addEventListener('pagehide',flush);document.addEventListener('visibilitychange',()=>{if(document.hidden)flush()});
+try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
+/* ===================== UI BUILD ===================== */
+const TABN=['📖 1. אוצר מילים','✍️ 2. איות וכתיבה','👤 3. כינויי גוף','➕ 4. To Be חיובי','➖ 5. To Be שלילי','🧪 6. מעבדת משפטים','🗣️ 7. כרטיסיות ודיבור','📝 מבחן מסכם'];
+const TITLES=['📘 לשונית 1: אוצר מילים','📘 לשונית 2: איות וכתיבה','📘 לשונית 3: כינויי גוף','📘 לשונית 4: Be חיובי (am / is / are)','📘 לשונית 5: Be שלילי (isn\'t / aren\'t / am not)','📘 לשונית 6: מעבדת משפטים','📘 לשונית 7: כרטיסיות והגייה','📘 על המבחן'];
+function build(){
+  $('#tabs').innerHTML=TABN.map((n,i)=>`<button class="tab" onclick="switchTab(${i})" ${i===7?'style="border-color:#f59e0b;color:#fbbf24"':''}>${n}</button>`).join('');
+  $('#panes').innerHTML=TABN.map((n,i)=>{
+    const open=(i<7&&exScore(i).done===0)||i===7?'open':'';
+    let h=`<section class="tab-content" id="tab-${i}"><details class="intro" id="intro-${i}" ${open}><summary>${TITLES[i]} – הסבר, כללי זהב ויוצאים מן הכלל</summary><div class="intro-body">${INTROS[i]}</div></details>`;
+    if(i<6)h+=`<div class="lesson" id="lesson-${i}"></div>`;
+    if(i===6)h+=`<div class="fc-wrap" id="fc-area"></div><h3 style="margin:16px 0 8px">🎙️ מעבדת דיבור – 40 משימות</h3><div class="lesson" id="lesson-6"></div>`;
+    if(i===7)h+=`<div id="exam-area"></div>`;if(i===8)h+='<div class="fc-wrap" id="chat-area"></div>';
+    return h+'</section>'}).join('');
+  EX.forEach((_,t)=>{if(S.cur[t]===undefined){const k=EX[t].findIndex(e=>!(S.ex[e.id]&&S.ex[e.id].done));S.cur[t]=k<0?0:k}});
+}
+function openM(id){$('#'+id).classList.add('show')}function closeM(id){$('#'+id).classList.remove('show')}
+function toast(t){const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(toast._t);toast._t=setTimeout(()=>e.style.display='none',2600)}
+function confetti(n=24){const em=['🎉','⭐','✨','🌟','🎊','💫'];for(let i=0;i<n;i++){const s=document.createElement('span');s.className='conf';s.textContent=rnd(em);s.style.left=Math.random()*100+'vw';s.style.animationDelay=Math.random()*.5+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),2600)}}
+function floatXP(n,node){const r=(node||document.body).getBoundingClientRect?(node||document.body).getBoundingClientRect():{left:innerWidth/2,top:innerHeight/2,width:0};const e=document.createElement('div');e.className='xpfloat';e.textContent='+'+n+' XP';e.style.left=(r.left+r.width/2)+'px';e.style.top=Math.max(60,Math.min(r.top,innerHeight-60))+'px';document.body.appendChild(e);setTimeout(()=>e.remove(),1000)}
+function addXP(n,node){S.xp+=n;S.day.n++;floatXP(n,node);const l=Math.floor(S.xp/150)+1;if(l>S.lvl){S.lvl=l;toast('🎊 עלית לרמה '+l+'!');confetti(30)}}
+function toggleSound(){S.sound=!S.sound;$('#snd-btn').textContent=S.sound?'🔊':'🔇';save()}
+function switchTab(i){S.tab=i;$$('.tab').forEach((b,k)=>b.classList.toggle('active',k===i));$$('.tab-content').forEach((s,k)=>s.classList.toggle('active',k===i));
+  if(i===6)fcStartTimer();else fcStopTimer();save()}
+function showRule(t,key){const d=$('#intro-'+t);if(d)d.open=true;const r=$('#rule-'+key);if(r){r.scrollIntoView({behavior:'smooth',block:'center'});r.classList.add('flash');setTimeout(()=>r.classList.remove('flash'),2200)}else d&&d.scrollIntoView({behavior:'smooth'})}
+/* ===================== SCORES / DASHBOARD ===================== */
+function exScore(t){let s=0,d=0;EX[t].forEach(e=>{const st=S.ex[e.id];if(st&&st.done){d++;s+=st.first?1:st.wrong<=2?.8:.6}});return{done:d,total:EX[t].length,score:s/EX[t].length,avg:d?s/d:0}}
+function cardsScore(){const m=EXAM_WORDS_LIST.filter(w=>S.cards[w.en]&&S.cards[w.en].s==='mastered').length;return{done:m,total:EXAM_WORDS_LIST.length,score:m/EXAM_WORDS_LIST.length,avg:1}}
+const ROWS=[{n:'📖 אוצר מילים',tab:0,w:.12},{n:'✍️ איות וכתיבה',tab:1,w:.12},{n:'👤 כינויי גוף',tab:2,w:.12},{n:'➕ Be חיובי (am/is/are)',tab:3,w:.15},{n:'➖ Be שלילי (isn\'t/aren\'t)',tab:4,w:.15},{n:'🧪 מעבדת משפטים',tab:5,w:.10},{n:'🗣️ דיבור והגייה',tab:6,w:.06}];
+function rowInfo(r){const x=exScore(r.tab);return x}
+function rowStatus(x){if(x.done===0)return['s0','עוד לא התחלתי'];if(x.done<x.total)return x.done>=6&&x.avg<.75?['s2','דורש חיזוק']:['s1','בתהליך'];return x.score>=.9?['s3','שולטת 🏆']:['s2','לחזק עוד']}
+function readiness(){let sum=0;ROWS.forEach(r=>sum+=r.w*exScore(r.tab).score);sum+=.08*cardsScore().score;const ex=S.lastExam;if(ex)return Math.round((sum+.10*ex.score/100)*100);return Math.round(sum/.90*100)}
+function readyLabel(p){return p<35?'בתחילת הדרך 🌱':p<60?'מתקדמת יפה 🚀':p<80?'כמעט מוכנה 💪':p<90?'מוכנה! 🌟':'מוכנה למבחן! 🏆'}
+function updateAll(){
+  const done=EX.reduce((a,_,t)=>a+exScore(t).done,0),tot=EX.length*40,mast=Object.values(S.cards).filter(c=>c.s==='mastered').length;
+  $('#stats').innerHTML=[[S.xp,'נקודות XP ⭐'],['רמה '+(Math.floor(S.xp/150)+1),'דרגה 🎖️'],[S.day.n+' / 10','יעד יומי 🎯'],[done+' / '+tot,'תרגילים 🏆'],[mast+' / 150','מילים מוכרות 📚'],['יום '+S.streak+' 🔥','רצף למידה']].map(a=>`<div class="stat"><b>${a[0]}</b><span>${a[1]}</span></div>`).join('');
+  $('#lvl-bar').style.width=(S.xp%150)/150*100+'%';
+  const p=Math.min(100,readiness());$('#ring').style.setProperty('--p',p);$('#ring-t').textContent=p+'%';
+  $('#ready-title').textContent='מוכנות למבחן: '+readyLabel(p);
+  $('#ready-sub').textContent=S.lastExam?`ציון המבחן האחרון: ${S.lastExam.score}/100. המוכנות משלבת תרגול, דיוק וציון מבחן.`:'המוכנות משלבת כמות תרגול ודיוק (תשובות נכונות בניסיון ראשון שוקלות יותר). בצעי גם את המבחן המסכם!';
+  $('#board-rows').innerHTML=ROWS.map(r=>{const x=exScore(r.tab),st=rowStatus(x);return `<div class="brow" onclick="switchTab(${r.tab});scrollTo({top:0,behavior:'smooth'})"><span>${r.n}</span><div><div class="bar"><i style="width:${Math.round(x.score*100)}%"></i></div></div><span class="pill ${st[0]}">${st[1]} · ${Math.round(x.score*100)}%</span></div>`}).join('')+
+   (()=>{const c=cardsScore();const st=c.done===0?['s0','עוד לא התחלתי']:c.done<c.total?['s1','בתהליך']:['s3','שולטת 🏆'];return `<div class="brow" onclick="switchTab(6)"><span>⭐ מילות המבחן (כרטיסיות)</span><div><div class="bar"><i style="width:${c.score*100}%"></i></div></div><span class="pill ${st[0]}">${c.done}/${c.total}</span></div>`})()+
+   (()=>{const e=S.lastExam;const st=!e?['s0','טרם בוצע']:e.score>=85?['s3','מצוין']:e.score>=60?['s1','טוב']:['s2','לחזק'];return `<div class="brow" onclick="switchTab(7)"><span>📝 מבחן מסכם</span><div><div class="bar"><i style="width:${e?e.score:0}%"></i></div></div><span class="pill ${st[0]}">${e?e.score+'/100':st[1]}</span></div>`})();
+  $('#snd-btn').textContent=S.sound?'🔊':'🔇';
+}
+/* ===================== WHATSAPP REPORT ===================== */
+const bar=p=>'█'.repeat(Math.round(p/10))+'░'.repeat(10-Math.round(p/10));
+function buildReport(){
+  const p=Math.min(100,readiness()),L=[];
+  L.push(`📊 *דוח התקדמות – מיה*`,`מוכנות למבחן באנגלית | יחידה 1`,`📅 ${new Date().toLocaleDateString('he-IL')}`,'');
+  L.push(`🎯 *מוכנות כללית: ${p}%* – ${readyLabel(p)}`,bar(p),'','*לפי נושאי המבחן:*');
+  ROWS.forEach(r=>{const x=exScore(r.tab),q=Math.round(x.score*100);L.push(`${r.n}: ${bar(q)} ${q}% (${x.done}/40)`)});
+  const c=cardsScore();L.push(`⭐ מילות המבחן שהוכיחה (כתיבה/דיבור): ${c.done}/${c.total}`);
+  L.push(S.lastExam?`📝 מבחן סימולציה: ${S.lastExam.score}/100`:'📝 מבחן סימולציה: טרם בוצע');
+  const weak=ROWS.map(r=>({n:r.n,s:exScore(r.tab)})).filter(o=>o.s.done<40||o.s.score<.85).sort((a,b)=>a.s.score-b.s.score).slice(0,3);
+  const rw=Object.entries(S.rw).sort((a,b)=>b[1]-a[1]).slice(0,3).filter(e=>RULES[e[0]]);
+  L.push('');if(weak.length){L.push('⚠️ *נושאים לחיזוק:*');weak.forEach(o=>L.push('• '+o.n))}else L.push('✅ כל הנושאים בשליטה!');
+  if(rw.length){L.push('','🔁 *כללים שמיה טעתה בהם הכי הרבה:*');rw.forEach(e=>L.push(`• ${RULES[e[0]].t} (${e[1]} טעויות)`))}
+  const nw=EXAM_WORDS_LIST.filter(w=>!(S.cards[w.en]&&S.cards[w.en].s==='mastered')).map(w=>w.en);
+  if(nw.length&&nw.length<21)L.push('','📚 *מילים שעוד לא הוכיחה:* '+nw.slice(0,12).join(', '));
+  L.push('',`⭐ ${S.xp} XP · רמה ${Math.floor(S.xp/150)+1} · 🔥 רצף ${S.streak} ימים · היום ${S.day.n} תרגילים`);
+  return L.join('\n')}
+function openWA(){$('#wa-text').value=buildReport();$('#wa-phone').value=S.phone||'';openM('m-wa')}
+function sendWA(){const txt=$('#wa-text').value;S.phone=$('#wa-phone').value.trim();flush();let ph=S.phone.replace(/\D/g,'');if(ph.startsWith('0'))ph='972'+ph.slice(1);window.open(`https://wa.me/${ph}?text=${encodeURIComponent(txt)}`,'_blank')}
+function copyRep(){const t=$('#wa-text');t.select();try{navigator.clipboard.writeText(t.value);toast('📋 הועתק!')}catch(e){document.execCommand('copy');toast('📋 הועתק!')}}
+function doReset(){try{localStorage.removeItem(KEY)}catch(e){}location.reload()}
+/* ===================== LESSON ENGINE ===================== */
+const L={};
+const cur=t=>EX[t][S.cur[t]||0];
+const ENC=['כמעט! 💪','לא נורא, ננסה שוב','קרוב מאוד!','אל תוותרי 🌟','עוד ניסיון קטן'];
+const WT={school:'ch נשמע k: "סקול"',reading:'ea = אִי ארוכה: "רי-דינג"',begin:'ההדגש בסוף: be-GIN',different:'DIF-rent (שני f)',hobby:'HOB-ee',also:'AWL-so',age:'"אֵיג׳" – יוצא כמו ay-j',year:'"יִיר" – מתחיל ב-y',pool:'"פּוּל" ארוכה',we:'w = שפתיים עגולות כמו "וו" (לא v)',week:'w = "וו" (לא v)'};
+const SYL={birthday:'BIRTH·day',different:'DIF·rent',hobby:'HOB·ee',begin:'be·GIN',also:'AWL·so',month:'MUNTH',school:'SKOOL',reading:'REE·ding',year:'YEER',pool:'POOL',age:'AYJ',three:'THREE',thank:'THANK',mother:'MU·ther',father:'FA·ther',brother:'BRU·ther',thirsty:'THUR·sty',think:'THINK',thursday:'THURZ·day',these:'THEEZ',those:'THOHZ',this:'THIS',that:'THAT',they:'THAY',the:'the (ðə)'};
+function wordTip(w){w=w.toLowerCase();if(TH0.has(w))return `<b>${w}</b>: 🦷 th דקה – קצה לשון בחוץ + נשיפה (כמו ס דקה). לא ${w[0]==='t'?'t':'s/t'}!`;if(TH1.has(w))return `<b>${w}</b>: 🔔 th קולית – לשון בחוץ + קול, כמו ז רכה. לא d ולא z!`;if(WT[w])return `<b>${w}</b>: ${WT[w]}`;return ''}
+function thTipLine(text){const tips=[...new Set(normEN(text).split(' '))].map(wordTip).filter(Boolean);return tips.length?`<div class="fb info" style="margin-top:8px;font-size:.9rem">📌 לפני שמדברים:<br>${tips.join('<br>')}</div>`:''}
+function ruleBlock(t,ex){const r=RULES[ex.rule];return r?`<div class="rl">📘 <b>${r.t}:</b> ${r.d} <button class="btn btn-sm" onclick="showRule(${t},'${ex.rule}')">חזרה על הכלל ↑</button></div>`:''}
+function anecBlock(ex){const a=ex.fun||(ANEC[ex.rule]&&rnd(ANEC[ex.rule]));return a?`<div class="an">💬 ${a}</div>`:''}
+function showFB(t,cls,h){$('#fb-'+t).innerHTML=`<div class="fb ${cls}">${h}</div>`}
+function stOf(ex){return S.ex[ex.id]=S.ex[ex.id]||{done:false,wrong:0}}
+function renderLesson(t){
+  const exs=EX[t],i=S.cur[t]||0,ex=exs[i],st=S.ex[ex.id]||{},done=exs.filter(e=>S.ex[e.id]&&S.ex[e.id].done).length;
+  L[t]={att:0,sel:[],locked:false,mapOpen:L[t]&&L[t].mapOpen};
+  const all=done===exs.length;
+  $('#lesson-'+t).innerHTML=`<div class="l-top"><div><b>${t===6?'🎙️ משימה':'תרגיל'} ${i+1} / ${exs.length}</b> ${st.done?'<span class="tag">✅ הושלם</span>':''}</div><div class="grp"><button class="btn btn-sm" onclick="goEx(${t},${i-1})">הקודם</button><button class="btn btn-sm" onclick="toggleMap(${t})">🗺️ מפה</button><button class="btn btn-sm" onclick="goEx(${t},${i+1})">דילוג ⏭</button></div></div>
+  <div class="bar"><i style="width:${done/exs.length*100}%"></i></div><div style="font-size:.8rem;color:var(--mu);margin-top:3px">${done} / ${exs.length} הושלמו${all?' 🎉 סיימת את כל הלשונית!':''}</div>
+  <div class="exmap" id="map-${t}" style="display:${L[t].mapOpen?'grid':'none'}">${exs.map((e,j)=>{const s=S.ex[e.id];return `<button class="${s&&s.done?'d1':s&&s.wrong?'d2':''} ${j===i?'cur':''}" onclick="goEx(${t},${j})">${j+1}</button>`}).join('')}</div>
+  <div class="xcard">${lessonBody(t,ex)}<div id="fb-${t}"></div><div class="row" id="nx-${t}"></div></div>`;
+  if(ex.dict)setTimeout(()=>speak(ex.dict),350);
+  const inp=$('#in-'+t);if(inp&&innerWidth>700)inp.focus();
+}
+function toggleMap(t){L[t].mapOpen=!L[t].mapOpen;$('#map-'+t).style.display=L[t].mapOpen?'grid':'none'}
+function goEx(t,j){const n=EX[t].length;S.cur[t]=((j%n)+n)%n;save();renderLesson(t)}
+function nextEx(t){const exs=EX[t],i=S.cur[t]||0;for(let k=1;k<=exs.length;k++){const j=(i+k)%exs.length;if(!(S.ex[exs[j].id]&&S.ex[exs[j].id].done)){goEx(t,j);return}}goEx(t,i+1)}
+function lessonBody(t,ex){
+  if(ex.type==='mcq'){L[t].opts=shuffle(ex.opts);return `<div class="q">${ex.q}</div><div class="opts">${L[t].opts.map((o,k)=>`<button class="opt ${ex.opt_ltr?'ltr':''}" id="o-${t}-${k}" onclick="pickOpt(${t},${k})">${esc(o)}</button>`).join('')}</div>`}
+  if(ex.type==='type')return `<div class="q">${ex.q}</div>${ex.dict?`<div class="row" style="margin:0 0 10px"><button class="btn btn-blue" onclick="speakEx(${t})">🔊 השמעה</button><button class="btn" onclick="speakEx(${t},.55)">🐢 לאט</button></div>`:''}<input class="txt ltr" id="in-${t}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="כתבי באנגלית…" onkeydown="if(event.key==='Enter')checkType(${t})"><div class="row"><button class="btn btn-main" onclick="checkType(${t})">✔ בדיקה</button></div>`;
+  if(ex.type==='scr'){let w=ex.sentence.split(' '),s=w;for(let k=0;k<8&&s.join(' ')===ex.sentence;k++)s=shuffle(w);L[t].tok=s;return `<div class="q">${ex.q}</div><div class="scr-zone" id="zone-${t}"></div><div class="scr-zone" style="border-style:solid;border-color:var(--bd)" id="bank-${t}">${s.map((x,k)=>`<button class="tok" id="tk-${t}-${k}" onclick="addTok(${t},${k})">${esc(x)}</button>`).join('')}</div><div class="row"><button class="btn btn-main" onclick="checkScr(${t})">✔ בדיקה</button><button class="btn" onclick="clearScr(${t})">↩ ניקוי</button></div>`}
+  if(ex.type==='speak')return `<div class="q">אמרי בקול באנגלית (לחצי על המיקרופון ודברי):</div><div class="speak-sent">${esc(ex.text)}</div><div style="text-align:center;color:var(--mu)">${ex.he}</div>${thTipLine(ex.text)}<div style="text-align:center;margin-top:14px"><button class="mic" id="mic-${t}" onclick="doSpeak(${t})">🎤</button><div style="font-size:.8rem;color:var(--mu);margin-top:4px" id="mst-${t}">לחצי ודברי</div><div id="heard-${t}"></div></div><div class="row" id="play-${t}" style="justify-content:center"></div>`;
+}
+function speakEx(t,r){const e=cur(t);speak(e.dict||e.say||e.text,r||.9)}
+/* ---- win / lose ---- */
+function win(t,ex,msg){
+  L[t].locked=true;const st=stOf(ex);let gain=0;
+  if(!st.done){const clean=L[t].att===0;gain=clean?10:L[t].att<4?6:3;st.done=true;st.first=clean&&!st.wrong;addXP(gain,$('#fb-'+t))}
+  beep(true);const n=EX[t].filter(e=>S.ex[e.id]&&S.ex[e.id].done).length;
+  const clean=L[t].att===0;
+  let h=`<b>✅ ${clean?rnd(CHEERS):'הצלחת! וזה מה שחשוב 👏'}</b>${gain?` <span style="color:var(--amber)">+${gain} XP</span>`:''}`;
+  if(msg)h+='<div style="margin-top:6px">'+msg+'</div>';
+  if(L[t].att>0||Math.random()<.5)h+=anecBlock(ex);
+  showFB(t,'ok',h);
+  if(n===EX[t].length&&gain){confetti(40);toast('🏆 סיימת את כל 40 התרגילים בלשונית!')}
+  $('#nx-'+t).innerHTML=`<button class="btn btn-main" id="go-${t}" onclick="nextEx(${t})">המשך ▶</button>`;const g=$('#go-'+t);g&&g.focus();
+  const say=ex.say||ex.dict;if(say&&ex.type!=='speak')setTimeout(()=>speak(say),250);
+  save();
+}
+function lose(t,ex,detail){
+  const st=stOf(ex);st.wrong++;S.rw[ex.rule]=(S.rw[ex.rule]||0)+1;L[t].att++;const n=L[t].att;beep(false);
+  let h=`<b>🤔 ${ENC[Math.min(n-1,ENC.length-1)]}</b><div style="margin-top:6px">${typeof detail==='function'?detail(n):(detail||'')}</div>`;
+  if(n>=2)h+=ruleBlock(t,ex);if(n>=3)h+=anecBlock(ex);
+  showFB(t,'bad',h);save();return n}
+/* ---- MCQ ---- */
+function pickOpt(t,k){if(L[t].locked)return;const ex=cur(t),v=L[t].opts[k],b=$(`#o-${t}-${k}`);
+  if(v===ex.ans){b.classList.add('ok');$$(`#lesson-${t} .opt`).forEach(x=>x.disabled=true);
+    win(t,ex,ex.say&&ex.type==='mcq'?`<span class="en-word">${esc(ex.say)}</span> 🔊`:'')}
+  else{b.classList.add('no');b.disabled=true;
+    const n=lose(t,ex,m=>smartMC(ex,m));
+    if(n>=4){const ans=L[t].opts.findIndex(o=>o===ex.ans);$(`#o-${t}-${ans}`).classList.add('ok')}}}
+/* ---- typing ---- */
+function checkType(t){if(L[t].locked)return;const ex=cur(t),inp=$('#in-'+t),v=inp.value;if(!v.trim())return;
+  if(ex.answers.some(a=>normEN(a)===normEN(v))){inp.disabled=true;inp.style.borderColor='var(--green)';win(t,ex,`<span class="pat" style="color:var(--green);font-size:1.1rem">${esc(ex.answers[0])}</span>`)}
+  else{inp.style.borderColor='var(--red)';const tg=ex.answers[0];lose(t,ex,n=>diagType(ex,v)+(thinHint(tg,v,n))+(n>=5?'<br>עכשיו הקלידי אותה בעצמך כדי להמשיך ✍️':''));inp.select()}}
+/* ---- scramble ---- */
+function addTok(t,k){if(L[t].locked)return;L[t].sel.push(k);$(`#tk-${t}-${k}`).classList.add('used');drawZone(t)}
+function drawZone(t){$('#zone-'+t).innerHTML=L[t].sel.map((k,j)=>`<button class="tok" onclick="rmTok(${t},${j})">${esc(L[t].tok[k])}</button>`).join('')}
+function rmTok(t,j){if(L[t].locked)return;const k=L[t].sel.splice(j,1)[0];$(`#tk-${t}-${k}`).classList.remove('used');drawZone(t)}
+function clearScr(t){if(L[t].locked)return;L[t].sel.forEach(k=>$(`#tk-${t}-${k}`).classList.remove('used'));L[t].sel=[];drawZone(t)}
+function checkScr(t){if(L[t].locked)return;const ex=cur(t),g=L[t].sel.map(k=>L[t].tok[k]).join(' ');if(!g)return;
+  if(normEN(g)===normEN(ex.sentence)){win(t,ex,`<span class="pat" style="color:var(--green);font-size:1.1rem">${esc(ex.sentence)}</span>`)}
+  else{const n=lose(t,ex,m=>m===1?'סדר המילים לא מדויק. '+thinHint(ex.sentence,g,1)+' המשפט מתחיל בנושא!':thinHint(ex.sentence,g,m));if(n>=5)clearScr(t)}}
+/* ---- speaking ---- */
+function scoreSpeech(target,alts){
+  const tt=normEN(target).split(' ');let best={ratio:-1,heard:'',miss:tt};const eq=(a,b)=>a===b||(a.length>=5&&lev(a,b)<=1);
+  alts.forEach(a=>{const hw=normEN(a).split(' ').filter(Boolean),m=tt.length,n=hw.length,dp=Array.from({length:m+1},()=>Array(n+1).fill(0));
+    for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)dp[i][j]=eq(tt[i-1],hw[j-1])?dp[i-1][j-1]+1:Math.max(dp[i-1][j],dp[i][j-1]);
+    const hit=new Set();let i=m,j=n;while(i>0&&j>0){if(eq(tt[i-1],hw[j-1])){hit.add(i-1);i--;j--}else if(dp[i-1][j]>=dp[i][j-1])i--;else j--}
+    let r=dp[m][n]/m;if(m===1&&tt[0].length<=3&&hw.includes(tt[0])){r=1;hit.add(0)}
+    if(r>best.ratio)best={ratio:r,heard:a,miss:tt.filter((_,k)=>!hit.has(k))}});
+  return best}
+function doSpeak(t){const ex=cur(t);if(L[t].locked)return;if(L[t].rec){try{L[t].rec.stop()}catch(e){}return}
+  const mic=$('#mic-'+t),st=$('#mst-'+t);mic.classList.add('rec');st.textContent='מקשיבה… דברי עכשיו 🎧';
+  L[t].rec=listenOnce('en-US',alts=>{const r=scoreSpeech(ex.text,alts);$('#heard-'+t).innerHTML=`<div class="heard">שמעתי: ${esc(r.heard)}</div>`;
+      if(r.ratio>=.85)win(t,ex,'דיברת ברור! 🎤');else speakFail(t,ex,r)},
+    err=>{const m={unsupported:'הדפדפן לא תומך בזיהוי קול. נסי ב-Chrome או Safari עדכני.','not-allowed':'צריך לאשר גישה למיקרופון בדפדפן (סמל המנעול ליד הכתובת).','no-speech':'לא שמעתי כלום – קרבי את המיקרופון ונסי שוב.'}[err]||'לא הצלחתי להקשיב. נסי שוב.';
+      showFB(t,'info',m+(err==='unsupported'||err==='not-allowed'?`<div class="row"><button class="btn" onclick="selfOk(${t})">אמרתי את זה בקול ✔ (בלי בדיקה)</button></div>`:''))},
+    ()=>{L[t].rec=null;mic.classList.remove('rec');st.textContent='לחצי ודברי'})}
+function selfOk(t){const ex=cur(t);L[t].att=Math.max(L[t].att,4);win(t,ex,'מסומן כתורגל. בדיקה אמיתית עובדת עם מיקרופון.')}
+function speakFail(t,ex,r){
+  const miss=r.miss,first=miss[0]||ex.text.split(' ')[0];
+  const n=lose(t,ex,m=>{
+    if(m===1)return `שמעתי ${r.ratio<=0?'משהו אחר':'חלק מהמשפט'}. נסי שוב לאט וברור, ושימי לב לכל מילה 🎙️`;
+    if(m===2)return `משהו לא ברור במילה שמתחילה ב-<b>"${first[0]}"</b>.${wordTip(first)?'<br>'+wordTip(first):''}`;
+    if(m===3)return `מילים שצריך לדייק: <b>${miss.join(', ')}</b>${miss.map(wordTip).filter(Boolean).map(x=>'<br>'+x).join('')}`;
+    if(m===4)return `נסי לפרק להברות: <b dir="ltr">${SYL[first.toLowerCase()]||first.split('').join('·')}</b>${wordTip(first)?'<br>'+wordTip(first):''}`;
+    return 'הגענו לניסיון החמישי – הנה איך אומרים את זה. הקשיבי, ואז נסי שוב 👇'});
+  if(n>=5)$('#play-'+t).innerHTML=`<button class="btn btn-blue" onclick="speak('${ex.text.replace(/'/g,"\\'")}',.9)">🔊 איך אומרים</button><button class="btn" onclick="speak('${ex.text.replace(/'/g,"\\'")}',.55)">🐢 לאט</button>`}
+/* ===================== FLASHCARDS ===================== */
+const FULL=[...EXAM_WORDS_LIST.map(w=>({...w,isExam:true})),...EXPANSION_A1_WORDS.map(w=>({...w,isExam:false}))];
+const FC={flipped:false,proof:false,att:0,t:15,paused:false,iv:null,rec:null};
+function deck(){const f=S.fcFilter;return FULL.filter(c=>{const s=S.cards[c.en]&&S.cards[c.en].s;return f==='all'||(f==='exam'&&c.isExam)||(f==='review'&&s==='review')||(f==='mastered'&&s==='mastered')})}
+function renderCard(){
+  const d=deck(),A=$('#fc-area');
+  const top=`<div class="fc-top"><b style="color:var(--blue)" id="fc-cnt"></b><select class="sel" onchange="S.fcFilter=this.value;S.fcIdx=0;save();renderCard()"><option value="all">כל 150 המילים</option><option value="exam">⭐ 21 מילות המבחן</option><option value="review">⚠️ לתרגול חוזר</option><option value="mastered">✅ מילים שהוכחתי</option></select></div>`;
+  if(!d.length){A.innerHTML=top+`<p style="padding:20px;text-align:center;color:var(--mu)">אין כרטיסים בקטגוריה הזאת עדיין.</p>`;$('#fc-area select').value=S.fcFilter;return}
+  S.fcIdx=Math.max(0,Math.min(S.fcIdx,d.length-1));const c=d[S.fcIdx],s=S.cards[c.en]&&S.cards[c.en].s;
+  FC.flipped=false;FC.proof=false;FC.att=0;FC.t=15;
+  A.innerHTML=top+`<div class="fc-timer"><i id="fc-bar"></i></div>
+  <div class="flip" id="flip" onclick="fcFlip()"><div class="flip-in"><div class="face front">${c.isExam?'<span class="fc-tag">⭐ מילת מבחן</span>':''}${s==='mastered'?'<span class="fc-tag" style="background:rgba(52,211,153,.25);color:var(--green)">✅ הוכחת</span>':''}<div class="fc-en">${esc(c.en)}</div><button class="btn btn-sm" style="margin-top:12px" onclick="event.stopPropagation();speak('${c.en.replace(/'/g,"\\'")}')">🔊 השמעה</button><div style="font-size:.8rem;color:#c7d2fe;margin-top:8px">לחצי "אני יודעת" כדי להוכיח, או הפכי את הכרטיס</div></div>
+  <div class="face back"><div class="fc-he">${esc(c.he)}</div>${c.ex?`<div style="direction:ltr;margin-top:8px;color:#e9d5ff">"${esc(c.ex)}"</div>`:''}<button class="btn btn-sm" style="margin-top:10px" onclick="event.stopPropagation();speak('${(c.ex||c.en).replace(/'/g,"\\'")}')">🔊 השמעה</button></div></div></div>
+  <div class="row" style="justify-content:center"><button class="btn" onclick="fcMove(-1)">הקודם</button><button class="btn" id="fc-pause" onclick="fcPause()">⏸️ השהיה</button><button class="btn" onclick="fcFlip()">🔄 הפוך</button><button class="btn" onclick="fcMove(1)">הבא</button></div>
+  <div class="row" style="justify-content:center"><button class="btn btn-main" onclick="fcProve()">✅ אני יודעת את התשובה!</button><button class="btn" onclick="fcReview()">⚠️ צריכה לתרגל</button></div>
+  <div id="fc-proof"></div>`;
+  $('#fc-cnt').textContent=`כרטיס ${S.fcIdx+1} מתוך ${d.length}`;$('#fc-area select').value=S.fcFilter;fcStartTimer()}
+function fcMove(n){const d=deck();S.fcIdx=(S.fcIdx+n+d.length)%d.length;save();renderCard()}
+function fcFlip(){FC.flipped=!FC.flipped;$('#flip').classList.toggle('flipped',FC.flipped);FC.t=15}
+function fcPause(){FC.paused=!FC.paused;$('#fc-pause').textContent=FC.paused?'▶️ המשך':'⏸️ השהיה'}
+function fcStartTimer(){fcStopTimer();FC.iv=setInterval(()=>{if(S.tab!==6||FC.paused||FC.proof||FC.flipped||!$('#fc-bar'))return;FC.t-=.1;$('#fc-bar').style.width=Math.max(0,FC.t/15*100)+'%';if(FC.t<=0)fcFlip()},100)}
+function fcStopTimer(){clearInterval(FC.iv)}
+function fcReview(){const c=deck()[S.fcIdx];S.cards[c.en]={s:'review'};save();toast('סימנתי לתרגול חוזר ⚠️');fcMove(1)}
+function fcProve(){const c=deck()[S.fcIdx];FC.proof=true;FC.att=0;
+  $('#fc-proof').innerHTML=`<div class="proof"><b>🧠 הוכיחי: מה הפירוש של <span dir="ltr" style="color:var(--blue)">${esc(c.en)}</span> בעברית?</b><div class="row"><input class="txt" id="fc-in" style="flex:1;min-width:160px" placeholder="כתבי בעברית…" autocomplete="off" onkeydown="if(event.key==='Enter')fcCheckTyped()"><button class="btn btn-main" onclick="fcCheckTyped()">בדיקה</button><button class="btn" id="fc-mic" onclick="fcMic()">🎤 אמרי בעברית</button><button class="btn" onclick="fcGiveUp()">לא בטוחה</button></div><div id="fc-fb"></div></div>`;
+  $('#fc-in').focus()}
+function fcMatch(c,v){const g=normHE(v);if(!g)return null;let best={d:99,a:''};heAlts(c.he).forEach(a=>{const d=lev(g,a),tol=a.length<=3?0:a.length<=6?1:2;if(d<=tol&&d<best.d)best={d,a}});
+  if(best.d<99)return best;return {d:-1,a:heAlts(c.he)[0]}}
+function fcResult(c,m,heard){
+  if(m.d>=0){const typo=m.d>0;S.cards[c.en]={s:'mastered'};addXP(typo?7:10,$('#fc-fb'));beep(true);confetti(10);
+    $('#fc-fb').innerHTML=`<div class="fb ok"><b>✅ ${typo?'כמעט מושלם!':rnd(CHEERS)}</b>${typo?`<div>שימי לב לכתיב: <b>${esc(c.he.split('/')[0].trim())}</b></div>`:''}<div class="an">💬 ${c.isExam&&W.find(w=>w.en===c.en)?W.find(w=>w.en===c.en).fun:'ידעת? כל מילה שמוכיחים בקול או בכתב נשארת בזיכרון הרבה יותר זמן 🧠'}</div></div><div class="row"><button class="btn btn-main" onclick="fcMove(1)">לכרטיס הבא ▶</button></div>`;
+    if(!FC.flipped)fcFlip();save();return}
+  FC.att++;beep(false);const n=FC.att;
+  $('#fc-fb').innerHTML=`<div class="fb bad"><b>🤔 ${ENC[Math.min(n-1,4)]}</b>${heard?`<div>שמעתי: ${esc(heard)}</div>`:''}<div style="margin-top:6px">${n>=5?`התשובה: <b>${esc(c.he)}</b>`:thinHint(m.a,heard||normHE($('#fc-in').value),n)}</div></div>`;
+  if(n>=5){S.cards[c.en]={s:'review'};if(!FC.flipped)fcFlip();$('#fc-fb').innerHTML+=`<div class="row"><button class="btn btn-main" onclick="fcMove(1)">לכרטיס הבא ▶</button></div>`}save()}
+function fcCheckTyped(){const c=deck()[S.fcIdx],v=$('#fc-in').value;if(!v.trim())return;fcResult(c,fcMatch(c,v))}
+function fcGiveUp(){const c=deck()[S.fcIdx];S.cards[c.en]={s:'review'};FC.proof=false;if(!FC.flipped)fcFlip();$('#fc-proof').innerHTML=`<div class="fb info">זה בסדר! ${esc(c.en)} = <b>${esc(c.he)}</b>. סימנתי לתרגול חוזר.</div>`;save()}
+function fcMic(){const c=deck()[S.fcIdx],b=$('#fc-mic');b.textContent='🎧 מקשיבה…';
+  listenOnce('he-IL',alts=>{let ok=null;for(const a of alts){const m=fcMatch(c,a);if(m&&m.d>=0){ok=m;break}const words=normHE(a).split(' ');for(const al of heAlts(c.he)){if(words.includes(al)){ok={d:0,a:al};break}}if(ok)break}
+      fcResult(c,ok||{d:-1,a:heAlts(c.he)[0]},alts[0])},
+    err=>{$('#fc-fb').innerHTML=`<div class="fb info">${{unsupported:'הדפדפן לא תומך בזיהוי קול – כתבי את התשובה במקום.','not-allowed':'צריך לאשר מיקרופון בדפדפן.'}[err]||'לא שמעתי – נסי שוב.'}</div>`},()=>b.textContent='🎤 אמרי בעברית')}
+/* ===================== EXAM ===================== */
+const EXAM_SEC=1200;let exIv=null;
+function examStart(){const q=[];TOPICS.forEach(t=>q.push(...shuffle(EXAM_POOL.map((x,i)=>({x,i})).filter(o=>o.x.topic===t.k)).slice(0,4).map(o=>o.i)));
+  const qs=shuffle(q);S.exam={qs,o:Object.fromEntries(qs.map(i=>[i,shuffle(EXAM_POOL[i].opts)])),a:{},start:Date.now(),submitted:false};save();renderExam()}
+function examPick(qi,k){if(!S.exam||S.exam.submitted)return;S.exam.a[qi]=S.exam.o[qi][k];const y=scrollY;save();renderExam();scrollTo(0,y)}
+function examLeft(){return Math.max(0,EXAM_SEC-Math.floor((Date.now()-S.exam.start)/1000))}
+const fmt=s=>`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+function renderExam(){
+  const A=$('#exam-area'),ex=S.exam;clearInterval(exIv);
+  if(!ex){A.innerHTML=`<div class="fc-wrap" style="text-align:center"><h3>מוכנה לסימולציה?</h3><p style="color:var(--mu);margin:8px 0">20 שאלות · 20 דקות · בלי רמזים${S.lastExam?`<br>ציון אחרון: <b>${S.lastExam.score}/100</b>`:''}</p><button class="btn btn-main" onclick="examStart()">▶ התחלת מבחן</button></div>`;return}
+  if(ex.submitted){A.innerHTML=examReport(ex);return}
+  const ans=Object.keys(ex.a).length;
+  A.innerHTML=`<div class="exam-bar"><b id="ex-timer" style="color:#fcd34d">⏱️ ${fmt(examLeft())}</b><span style="color:var(--mu)">נענו ${ans} / 20</span><button class="btn btn-blue" onclick="examFinish()">🏆 הגשה</button></div>`+
+   ex.qs.map((qi,n)=>{const q=EXAM_POOL[qi];return `<div class="xcard"><div style="color:var(--mu);font-size:.8rem">שאלה ${n+1}</div><div class="q">${q.q.replace('___','_____')}</div><div class="opts">${ex.o[qi].map((o,k)=>`<button class="opt ltr ${ex.a[qi]===o?'ok':''}" onclick="examPick(${qi},${k})">${esc(o)}</button>`).join('')}</div></div>`}).join('');
+  exIv=setInterval(()=>{if(!S.exam||S.exam.submitted){clearInterval(exIv);return}const l=examLeft(),e=$('#ex-timer');if(e)e.textContent='⏱️ '+fmt(l);if(l<=0){clearInterval(exIv);examFinish()}},1000)}
+function examFinish(){const ex=S.exam;if(!ex||ex.submitted)return;let c=0;const by={};TOPICS.forEach(t=>by[t.k]=0);
+  ex.qs.forEach(qi=>{const q=EXAM_POOL[qi];if(ex.a[qi]===q.ans){c++;by[q.topic]++}else S.rw[q.rule]=(S.rw[q.rule]||0)+1});
+  ex.submitted=true;ex.correct=c;ex.by=by;const score=c*5;S.lastExam={score,at:Date.now(),by};addXP(Math.round(score/4));if(score>=85){confetti(60)}save();renderExam();scrollTo({top:0,behavior:'smooth'})}
+function examReport(ex){
+  const sc=ex.correct*5,col=sc>=85?'var(--green)':sc>=60?'var(--amber)':'var(--red)';
+  const msg=sc>=90?'מדהים מיה! את מוכנה למבחן 🏆':sc>=75?'עבודה יפה! עוד קצת חיזוק ואת שם 💪':sc>=55?'בדרך הנכונה – חזרי על הכללים בנושאים החלשים 📘':'זה בסדר! כל טעות היא הזדמנות ללמוד. חזרי להסברים ותרגלי עוד 🌱';
+  const wrong=ex.qs.filter(qi=>ex.a[qi]!==EXAM_POOL[qi].ans);
+  return `<div class="report"><h2 style="color:${col}">🎉 תוצאות המבחן: ${sc} / 100</h2><p style="margin:6px 0">${msg}</p>${TOPICS.map(t=>{const p=ex.by[t.k]/4*100;return `<div class="trow"><span>${t.i} ${t.n}</span><div class="bar"><i style="width:${p}%"></i></div><b>${ex.by[t.k]}/4</b></div>`}).join('')}
+  ${wrong.length?`<h4 style="margin:14px 0 6px;color:var(--amber)">🔎 לחזרה – ${wrong.length} שאלות</h4>`+wrong.map(qi=>{const q=EXAM_POOL[qi],r=RULES[q.rule];return `<div class="fb bad" style="margin-bottom:8px"><div>${q.q.replace('___','_____')}</div><div>✅ התשובה: <b dir="ltr">${esc(q.ans)}</b>${ex.a[qi]?` · ענית: <span dir="ltr">${esc(ex.a[qi])}</span>`:' · לא נענתה'}</div>${r?`<div class="rl">📘 <b>${r.t}:</b> ${r.d}</div>`:''}</div>`}).join(''):'<p>✅ כל התשובות נכונות! 🌟</p>'}
+  <div class="row"><button class="btn btn-wa" onclick="openWA()">📤 שליחת התוצאות בוואטסאפ</button><button class="btn btn-main" onclick="S.exam=null;save();renderExam()">🔁 מבחן חדש</button></div></div>`}
+/* ===================== TRANSLATION BUBBLE ===================== */
+const DICT={};FULL.forEach(c=>DICT[c.en.toLowerCase()]=c.he);
+Object.assign(DICT,{am:'(Be) – I am',is:'(Be) – he/she/it is',are:'(Be) – we/you/they are',not:'לא',"isn't":'is not = אינו / אינה',"aren't":'are not = אינם',"i am happy":'אני שמחה',"you are happy":'את שמחה',"she is a doctor":'היא רופאה',"he is my father":'הוא אבא שלי',"it is big":'זה גדול',"we are at the park":'אנחנו בפארק',"they are at school":'הם בבית ספר',"i am not happy":'אני לא שמחה',"you are not happy":'את לא שמחה',"she is not a doctor":'היא לא רופאה',"he is not my father":'הוא לא אבא שלי',"it is not big":'זה לא גדול',"we are not at the park":'אנחנו לא בפארק',"they are not at school":'הם לא בבית ספר'});
+function showBubble(el){const w=el.textContent.trim(),he=DICT[w.toLowerCase()],b=$('#bubble');b.innerHTML=`<div dir="ltr" style="font-weight:800;color:var(--blue)">${esc(w)}</div>${he?`<div style="margin:4px 0">${he}</div>`:''}<button class="btn btn-sm" onclick="speak('${w.replace(/'/g,"\\'")}')">🔊 השמעה</button>`;b.style.display='block';
+  const r=el.getBoundingClientRect();b.style.top=Math.min(innerHeight-110,r.bottom+8)+'px';b.style.left=Math.max(8,Math.min(innerWidth-270,r.left))+'px';speak(w)}
+document.addEventListener('click',e=>{const w=e.target.closest('.en-word');if(w&&!w.closest('#bubble')){showBubble(w)}else if(!e.target.closest('#bubble'))$('#bubble').style.display='none'});
+
+/* ===================== MIA v3 ADDITIONS ===================== */
+/* --- precise feedback --- */
+function beCat(ex){if(!/^be-/.test(ex.rule)||ex.type!=='mcq')return null;const tx=ex.q.replace(/<br>/g,' ').replace(/<[^>]*>/g,''),m=tx.match(/([A-Z][\w' ]*?) _____/);if(!m)return null;const s=m[1].trim(),l=s.toLowerCase(),last=l.split(' ').pop();
+  if(l==='i')return{s,c:'את מדברת על עצמך',m:'רק <b>I</b> הולך עם <b>am</b>'};
+  if(/ and /.test(l)||['we','you','they'].includes(l)||(/s$/.test(last)&&!['is','this'].includes(last)))return{s,c:'זה <b>יותר מאחד</b> (או we / you / they)',m:'רבים → <b>are</b>'};
+  return{s,c:'זה אדם או דבר <b>אחד</b>',m:'אחד → <b>is</b>'}}
+function smartMC(ex,m){const b=beCat(ex),neg=/n't|not/.test(ex.ans)?'<br>ובשלילה: am not / isn\'t / aren\'t':'';
+  if(b){if(m===1)return `הנושא הוא <b dir="ltr">${esc(b.s)}</b> – ${b.c}.`;if(m===2)return `${b.c}. ${b.m}.${neg}<br>בדקי שוב עם הכלל למטה 👇`;return 'נשארו פחות אפשרויות – את קרובה!'}
+  const h=ex.hint||RULES[ex.rule].h;return m===1?'רמז: '+h:m===2?'עוד רמז: '+h+'<br>ובדקי שוב עם הכלל למטה 👇':'נשארו פחות אפשרויות – את קרובה!'}
+const BEM={i:'am',he:'is',she:'is',it:'is',we:'are',you:'are',they:'are'},HEP={i:'אני',he:'הוא',she:'היא',it:'זה',we:'אנחנו',you:'את / אתם',they:'הם'};
+function gram(v){const raw=v.trim(),s=normEN(v).split(' '),B=['am','is','are'];
+  for(let j=0;j<s.length;j++){const p=s[j];if(!BEM[p])continue;const n=s[j+1];
+    if(B.includes(n)&&n!==BEM[p])return `אחרי <b dir="ltr">${p==='i'?'I':p}</b> (${HEP[p]}) בא <b>${BEM[p]}</b>, לא ${n}.`;
+    if(['no','not'].includes(n)&&B.includes(s[j+2]))return '<b>not</b> באה <b>אחרי</b> am / is / are, לא לפניהם.';
+    if(n&&['happy','sad','tired','hungry','thirsty','ten','a','at','in','my','big','small','good','fine','nice','great'].includes(n))return `חסר פועל Be: <b dir="ltr">${p==='i'?'I':p} ${BEM[p]} ${n}…</b> – באנגלית חייבים am / is / are.`}
+  if(/\bi have (\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b/i.test(raw))return 'על גיל אומרים <b>I am ten</b> – לא I have.';
+  if(/\bi\b/.test(raw)&&!/\bI\b/.test(raw))return 'המילה <b>I</b> (אני) תמיד נכתבת באות גדולה.';return ''}
+function diagType(ex,v){const tg=normEN(ex.answers[0]),g=normEN(v),tw=tg.split(' '),gw=g.split(' ');let m=gram(v);
+  if(!m){if(tw.length>1){
+    if(tw.includes('not')&&!gw.includes('not'))m=/\bno\b/.test(g)?'כותבים <b>not</b> (לא no) – מיד אחרי am / is / are.':'חסר <b>not</b> – המשפט צריך להיות שלילי.';
+    else if(!tw.includes('not')&&gw.includes('not'))m='המשפט צריך להיות <b>חיובי</b> – בלי not.';
+    else{const miss=tw.filter(x=>!gw.includes(x)),ext=gw.filter(x=>!tw.includes(x));
+      if(miss.length===1&&!ext.length)m=`חסרה מילה אחת – היא מתחילה ב-<b>"${miss[0][0]}"</b>.`;
+      else if(ext.length===1&&!miss.length)m=`יש מילה מיותרת: <b dir="ltr">${esc(ext[0])}</b>.`;
+      else if(miss.length===1&&ext.length===1)m=`המילה <b dir="ltr">${esc(ext[0])}</b> לא מתאימה כאן. חפשי מילה שמתחילה ב-<b>"${miss[0][0]}"</b>.`;
+      else if(!miss.length&&!ext.length)m='כל המילים נכונות, אבל הסדר לא: מי? → am/is/are → (not) → המשך.'}}
+   else if(g){const d=tg.length-g.length;if(d>0)m=`חסרות <b>${d}</b> אותיות.`;else if(d<0)m=`יש <b>${-d}</b> אותיות מיותרות.`;else{const k=[...tg].findIndex((c,j)=>c!==g[j]);if(k>=0)m=`האות ה-<b>${k+1}</b> לא נכונה.`}}}
+  return m?`<div>🎯 ${m}</div>`:''}
+/* --- save & continue on another device --- */
+function idb(op,val){return new Promise(res=>{try{const r=indexedDB.open('mia_a1',1);r.onupgradeneeded=()=>r.result.createObjectStore('s');r.onsuccess=()=>{const st=r.result.transaction('s',op==='put'?'readwrite':'readonly').objectStore('s'),q=op==='put'?st.put(val,'S'):st.get('S');q.onsuccess=()=>res(q.result);q.onerror=()=>res(null)};r.onerror=()=>res(null)}catch(e){res(null)}})}
+const B64='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+function packState(){let ex='',cd='';EX.forEach(a=>a.forEach(e=>{const s=S.ex[e.id]||{};ex+=B64[(s.done?1:0)|(s.first?2:0)|(Math.min(15,s.wrong||0)<<2)]}));
+  FULL.forEach(c=>{const s=S.cards[c.en]&&S.cards[c.en].s;cd+=s==='mastered'?'2':s==='review'?'1':'0'});
+  const o={v:2,xp:S.xp,ex,cd,tab:S.tab,streak:S.streak,lastDay:S.lastDay,day:S.day,lastExam:S.lastExam,rw:S.rw,chat:S.chat,cur:S.cur,lvl:S.lvl,u:S.u||0};
+  return btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
+function unpack(code){try{const j=JSON.parse(decodeURIComponent(escape(atob(code.trim().replace(/-/g,'+').replace(/_/g,'/')))));const ex={},cards={};let k=0;
+  EX.forEach(a=>a.forEach(e=>{const n=B64.indexOf(j.ex[k++]||'A');if(n>0)ex[e.id]={done:!!(n&1),first:!!(n&2),wrong:n>>2}}));
+  FULL.forEach((c,i)=>{if(j.cd[i]==='2')cards[c.en]={s:'mastered'};else if(j.cd[i]==='1')cards[c.en]={s:'review'}});return{...j,ex,cards}}catch(e){return null}}
+const syncLink=()=>location.origin+location.pathname+'#p='+packState();
+let SYNCP=null;
+function openSync(){flush();$('#sync-msg').innerHTML=`<span style="color:var(--mu);font-size:.85rem">נשמר לאחרונה: ${new Date(S.u||Date.now()).toLocaleString('he-IL')}</span>`;openM('m-sync')}
+function syncCopy(){const l=syncLink();try{navigator.clipboard.writeText(l);toast('🔗 הקישור הועתק!')}catch(e){$('#sync-code').value=l;toast('העתיקי את הקישור מהתיבה')}}
+function syncWA(){window.open('https://wa.me/?text='+encodeURIComponent('ההתקדמות שלי באנגלית 👇\n'+syncLink()),'_blank')}
+function syncPreview(j){SYNCP=j;$('#sync-msg').innerHTML=`<div class="fb info">נמצאה התקדמות: <b>${j.xp} XP</b>. כאן במכשיר: <b>${S.xp} XP</b>.<div class="row"><button class="btn btn-main" onclick="syncApply()">להחליף בהתקדמות שנמצאה</button></div></div>`;openM('m-sync')}
+function syncBox(){let t=$('#sync-code').value.trim();const i=t.indexOf('#p=');if(i>=0)t=t.slice(i+3);const j=t&&unpack(t);if(!j)return $('#sync-msg').innerHTML='<div class="fb bad">הקוד לא תקין. העתיקי שוב את הקישור המלא.</div>';syncPreview(j)}
+function syncApply(){if(!SYNCP)return;const p=SYNCP;S={...S,...p,phone:S.phone,sound:S.sound,exam:null,fcIdx:0};flush();history.replaceState(null,'',location.pathname);location.reload()}
+function syncInit(){if(location.hash.startsWith('#p=')){const j=unpack(location.hash.slice(3));history.replaceState(null,'',location.pathname);if(j)syncPreview(j)}}
+/* --- Lily: conversation coach --- */
+const AI_ENDPOINT=''; /* optional: URL of your own AI proxy. Empty = built-in coach */
+const NUMW={one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,eleven:11,twelve:12};
+const MON=['january','february','march','april','may','june','july','august','september','october','november','december'];
+const FEEL=['happy','sad','tired','hungry','thirsty','good','fine','great','ok','okay','nice'];
+const HOB=['reading','drawing','dancing','music','swimming','singing','football','games'];
+const cap=s=>s[0].toUpperCase()+s.slice(1);
+const CK={
+ name:v=>{const m=v.match(/(?:name is|i am|i'm)\s+([a-z]+)/i)||v.match(/^\s*([a-z]+)\s*[.!]?\s*$/i);return m?{ok:1,slot:cap(m[1].toLowerCase())}:{ok:0}},
+ age:v=>{const d=v.match(/\b(\d{1,2})\b/),w=normEN(v).split(' ').find(x=>NUMW[x]);return d?{ok:1,slot:d[1]}:w?{ok:1,slot:NUMW[w]}:{ok:0}},
+ feel:v=>{const w=normEN(v).split(' ').find(x=>FEEL.includes(x));return w?{ok:1,slot:w}:{ok:0}},
+ month:v=>{const w=normEN(v).split(' ').find(x=>MON.includes(x));return w?{ok:1,slot:cap(w)}:{ok:0}},
+ hobby:v=>{const n=normEN(v),w=HOB.find(x=>n.includes(x));return w?{ok:1,slot:w}:{ok:0}},
+ yn:v=>/^(yes|no)\b/i.test(v.trim())?{ok:1}:{ok:0},
+ no:v=>/^no\b/i.test(v.trim())?{ok:1}:{ok:0}};
+const CHAT_SCEN=[
+{id:'meet',t:'👋 להכיר את לילי',steps:[
+ {b:'Hi! I am Lily. What is your name?',he:'היי! אני לילי. איך קוראים לך?',k:'name',chips:['My name is Mia.','I am Mia.'],tip:'כתבי: My name is ___ (או I am ___)',r:'Nice to meet you, {name}!'},
+ {b:'How old are you, {name}?',he:'בת כמה את?',k:'age',chips:['I am ten.','I am nine.'],tip:'כתבי: I am ___ (מספר באנגלית: ten, nine, eight…)',r:'{age}! Great!'},
+ {b:'How are you today?',he:'מה שלומך היום?',k:'feel',chips:['I am happy.','I am tired.'],tip:'כתבי: I am ___ (happy / sad / tired / hungry)',r:'OK! Thank you, {name}.'},
+ {b:'When is your birthday? Which month?',he:'מתי יום ההולדת שלך? באיזה חודש?',k:'month',chips:['My birthday is in May.','May.'],tip:'כתבי: My birthday is in ___ (January, May, June…)',r:'{month}! That is a nice month.'}]},
+{id:'hobby',t:'🎨 תחביבים ושאלות כן / לא',steps:[
+ {b:'What is your hobby?',he:'מה התחביב שלך?',k:'hobby',chips:['My hobby is drawing.','I like reading.'],tip:'כתבי: My hobby is ___ (drawing, reading, dancing, music…)',r:'{hobby}! That is fun.'},
+ {b:'I also like music. Do you like music?',he:'גם אני אוהבת מוזיקה. את אוהבת מוזיקה?',k:'yn',chips:['Yes, I do.','No, I do not.'],tip:'ענו: Yes, I do. או No, I do not.',r:'OK!'},
+ {b:'Are you at school now?',he:'את בבית ספר עכשיו?',k:'yn',chips:['Yes, I am.','No, I am not.'],tip:'ענו: Yes, I am. או No, I am not.',r:'I see!'},
+ {b:'Is Lily a cat? (I am Lily!)',he:'לילי היא חתול? (אני לילי!)',k:'no',chips:['No, she is not.',"No, she isn't."],tip:'ענו: No, she is not. (she = היא)',r:'Ha ha! Yes, I am a girl!'}]}];
+const CH={sc:null,i:0,miss:0,slots:{},he:false,part:0};
+const fill=s=>s.replace(/\{(\w+)\}/g,(_,k)=>CH.slots[k]||'');
+const cadd=(c,h)=>{const l=$('#chat-log');l.insertAdjacentHTML('beforeend',`<div class="${c}">${h}</div>`);l.scrollTop=l.scrollHeight};
+function chatBot(t,he){cadd('cb',`${esc(t)}<small style="display:${CH.he?'block':'none'}">${he||''}</small>`);speak(t,.85)}
+function chatInit(){S.chat=S.chat||{done:{}};chatMenu()}
+function chatMenu(){CH.sc=null;try{speechSynthesis.cancel()}catch(e){}
+  $('#chat-area').innerHTML=`<h3>💬 שיחה עם לילי</h3><p style="color:var(--mu);margin:6px 0 10px">לילי היא חברה לשיחה באנגלית. היא שואלת – ואת עונה בכתיבה או בדיבור 🎤. אם משהו לא נכון, לילי תסביר בדיוק מה לתקן.</p>`+CHAT_SCEN.map((s,k)=>`<button class="btn" style="display:block;width:100%;margin:8px 0;text-align:right" onclick="chatStart(${k})">${s.t} ${S.chat.done[s.id]?'✅ ×'+S.chat.done[s.id]:''}</button>`).join('')}
+function chatStart(k){CH.sc=CHAT_SCEN[k];CH.i=0;CH.miss=0;CH.slots={};
+  $('#chat-area').innerHTML=`<div class="fc-top"><b style="color:var(--blue)">${CH.sc.t}</b><div class="row" style="margin:0"><button class="btn btn-sm" onclick="CH.he=!CH.he;$$('#chat-log small').forEach(e=>e.style.display=CH.he?'block':'none')">🇮🇱 תרגום</button><button class="btn btn-sm" onclick="chatMenu()">⬅ חזרה</button></div></div><div class="bar"><i id="chat-bar" style="width:0"></i></div><div id="chat-log"></div><div class="row" id="chat-chips"></div><div class="row"><input class="txt ltr" id="chat-in" style="flex:1;min-width:150px" placeholder="Write in English…" autocomplete="off" autocapitalize="off" spellcheck="false" onkeydown="if(event.key==='Enter')chatSend()"><button class="btn btn-main" onclick="chatSend()">➤</button><button class="btn" id="chat-mic" onclick="chatMic()">🎤</button><button class="btn" onclick="chatReplay()">🔊</button></div>`;chatAsk()}
+function chatAsk(){const s=CH.sc.steps[CH.i];$('#chat-bar').style.width=CH.i/CH.sc.steps.length*100+'%';CH.miss=0;CH.part=0;chatBot(fill(s.b),s.he);
+  $('#chat-chips').innerHTML=s.chips.map(c=>`<button class="chip" onclick="$('#chat-in').value=this.textContent;chatSend()">${esc(fill(c))}</button>`).join('');const i=$('#chat-in');if(i&&innerWidth>700)i.focus()}
+function chatReplay(){const l=[...$$('#chat-log .cb')].pop();if(l)speak(l.firstChild.textContent,.8)}
+function chatMic(){const b=$('#chat-mic');b.textContent='🎧';listenOnce('en-US',a=>{$('#chat-in').value=a[0];chatSend()},e=>toast(e==='not-allowed'?'צריך לאשר מיקרופון':'לא שמעתי – נסי שוב'),()=>b.textContent='🎤')}
+function chatNext(r){if(r)setTimeout(()=>chatBot(fill(r)),500);CH.i++;
+  if(CH.i<CH.sc.steps.length)return setTimeout(chatAsk,r?1700:600);
+  setTimeout(()=>{$('#chat-bar').style.width='100%';S.chat.done[CH.sc.id]=(S.chat.done[CH.sc.id]||0)+1;addXP(15,$('#chat-log'));confetti(30);beep(true);
+    cadd('cb',`Great job${CH.slots.name?', '+esc(CH.slots.name):''}! 🎉<small style="display:${CH.he?'block':'none'}">כל הכבוד! סיימת את השיחה (+15 XP)</small>`);$('#chat-chips').innerHTML=`<button class="btn btn-main" onclick="chatMenu()">לשיחה אחרת ▶</button>`;save()},r?1800:700)}
+function chatSend(){const inp=$('#chat-in');if(!CH.sc||CH.i>=CH.sc.steps.length||!inp)return;const v=inp.value.trim();if(!v)return;inp.value='';cadd('cu',esc(v));
+  const s=CH.sc.steps[CH.i],r=CK[s.k](v),g=gram(v),model=fill(s.chips[0]);
+  if(r.ok){if(r.slot)CH.slots[s.k]=r.slot;
+    if(g){cadd('cfix',`✏️ כמעט! ${g}<br>אפשר לומר: <b dir="ltr">${esc(model)}</b>`);addXP(3,$('#chat-log'));beep(false)}
+    else{cadd('cfix',`✅ ${rnd(CHEERS)}`);addXP(8,$('#chat-log'));beep(true)}
+    save();return chatNext(s.r)}
+  CH.miss++;beep(false);
+  if(CH.miss===1)cadd('cfix',`💡 ${g?g+'<br>':''}${s.tip}`);
+  else if(CH.miss===2)cadd('cfix',`💡 ${g?g+'<br>':''}הנה דוגמה: <b dir="ltr">${esc(model)}</b> – אפשר ללחוץ עליה למעלה.`);
+  else{cadd('cfix',`זה בסדר! ככה אומרים: <b dir="ltr">${esc(model)}</b>`);chatNext(s.r)}}
+INTROS.push('<p>לילי היא חברה לשיחה באנגלית. היא שואלת שאלות קצרות, ואת עונה בכתיבה או בדיבור. אם יש טעות (למשל I is במקום I am), לילי תסביר בדיוק מה לתקן. אפשר ללחוץ על התשובות המוכנות אם קשה, ולהפעיל "תרגום" לעברית.</p>');
+TABN.push('💬 8. שיחה עם לילי');TITLES.push('💬 לשונית 8: שיחה עם לילי');
+
+/* ===================== INIT ===================== */
+function init(){loadState();initVoice();build();updateAll();for(let t=0;t<6;t++)renderLesson(t);renderLesson(6);renderCard();renderExam();chatInit();syncInit();switchTab(Math.min(8,S.tab||0));save()}
+window.addEventListener('DOMContentLoaded',async()=>{if(!localStorage.getItem(KEY)){const r=await idb('get');if(r){try{localStorage.setItem(KEY,r)}catch(e){}}}init()});
+
+</script>
+</body>
+</html>
